@@ -1,0 +1,3249 @@
+<style>
+  .is-hidden {
+    display: none !important;
+  }
+</style>
+
+<div class="container-fluid py-4">
+  <!-- Encabezado / Breadcrumb -->
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <div>
+      <div class="text-muted small"><span class="fw-semibold"></span></div>
+      <h1 class="h4 page-title mb-0"></h1>
+    </div>
+    <div class="d-flex gap-2">
+      <a class="btn btn-sm btn-light filter-pill" href="#"><i class="bi bi-arrow-repeat me-1"></i>Refrescar</a>
+      <a class="btn btn-sm btn-primary" href="#"><i class="bi bi-gear me-1"></i>Configuración general</a>
+    </div>
+  </div>
+
+  <!-- Filtros superiores -->
+  <div class="card border-0 shadow-sm mb-4">
+    <div class="card-body">
+      <div class="row g-3">
+        <!--align-items-end"-->
+        <div class="col-12 col-md-4">
+          <label class="form-label mb-1">Buscar opción</label>
+          <div class="position-relative">
+            <input id="txtSearch" type="text" class="form-control"
+              placeholder="Escribe para filtrar por título o descripción…" />
+            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <label class="form-label mb-1">Categoría</label>
+          <select id="selCategory" class="form-select w-100" data-control="select2"
+            data-placeholder="Filtrar por categoría" data-hide-search="true">
+            <option value="ALL" selected>Todas</option>
+            <option value="personas">Carga de personas</option>
+            <option value="ausentismos">Carga de ausentismos</option>
+            <option value="empresa">Datos de empresa</option>
+            <option value="nomina">Datos de nómina</option>
+            <option value="organizacion">Estructura organizacional</option>
+            <option value="test">TEST Cargas Masivas</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <label class="form-label mb-1">Acciones rápidas</label>
+          <div class="d-flex gap-2">
+            <a class="btn btn-light w-100" href="#"><i class="bi bi-journal-text me-2"></i>Historial de cargas</a>
+            <a class="btn btn-light w-100" href="#"><i class="bi bi-question-circle me-2"></i>Guía</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección: Estructura organizacional -->
+  <div class="mb-4 section-wrapper" data-section="organizacion">
+    <div class="d-flex align-items-center mb-2">
+      <h3 class="section-title">Estructura organizacional</h3>
+      <h3 class="ms-2 badge text-bg-light fs-3">6</h3>
+    </div>
+
+    <div class="row g-3">
+      <!-- Card: Estructura organizacional -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Estructura Organizacional"
+          data-desc="Carga masiva de la estructura organizacional de la empresa" data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-diagram-3"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Estructura Organizacional</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de la estructura organizacional de la empresa.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: estructura_organizacional.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="estructura_organizacional">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Familias -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Familias" data-desc="Carga masiva de familias de puestos"
+          data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-success"><i class="bi bi-collection"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Familias</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de familias de puestos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: familias.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="familias">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Puestos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Puestos" data-desc="Carga masiva de puestos de la organización"
+          data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-briefcase"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Puestos</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de puestos de la organización.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: plantilla_puestos.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="puestos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Posiciones -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Posiciones"
+          data-desc="Carga masiva de posiciones de la organización" data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger">
+              <i class="bi bi-person-workspace"></i>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Posiciones</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de posiciones de la organización.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: plantilla_posiciones.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="posiciones">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Cargos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Cargos" data-desc="Carga masiva de cargos de la organización"
+          data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-info"><i class="bi bi-person-badge"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Cargos</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de cargos de la organización.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: plantilla_cargos.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="cargos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Bandas Salariales -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Bandas Salariales" data-desc="Carga masiva de bandas salariales"
+          data-section="organizacion">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Bandas Salariales</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de bandas salariales.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: bandas_salariales.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="bandas_salariales">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Centros de costo -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Centros de costo"
+          data-desc="Sube la estructura de descuentos de los empleados" data-section="empresa">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-grid-3x3-gap"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Centros de Costo</div>
+              <div class="text-muted small mb-3">
+                Sube la estructura de centros de costo de los empleados.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: centros_costo.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="centros-costo">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección: Carga de personas -->
+  <div class="mb-4 section-wrapper" data-section="personas">
+    <div class="d-flex align-items-center mb-2">
+      <h3 class="section-title">Carga de personas</h3>
+      <h3 class="ms-2 badge text-bg-light fs-3">10</h3>
+    </div>
+
+
+
+    <div class="row g-3">
+      <!-- Card: Carga de Personas -->
+
+      <!-- Card: Carga de Personas -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Personas"
+          data-desc="Carga la lista de personas que se relacionan con tu organización" data-section="mstr_persons">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Personas (Master)</div>
+              <div class="text-muted small mb-3">
+                Carga la información personal de las personas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: mstr_personas.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="mstr_persons">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Plazas"
+          data-desc="Carga la lista de plazas que se relacionan con tu organización" data-section="work_places">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Plazas</div>
+              <div class="text-muted small mb-3">
+                Carga la información de las plazas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: work_places.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="work_places">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Personas"
+          data-desc="Carga la lista de personas que se relacionan con tu organización" data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Relación Laboral (Directorio)</div>
+              <div class="text-muted small mb-3">
+                Carga la lista de personas que se relacionan con tu
+                organización.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: personas.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="personas">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card: Actualización de Personas -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Actualización de Relación Laboral (Directorio)"
+          data-desc="Actualización de la lista de personas que se relacionan con tu organización"
+          data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-primary"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Actualización de Relación Laboral (Directorio)
+              </div>
+              <div class="text-muted small mb-3">
+                Actualización de la lista de personas que se relacionan con tu
+                organización.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: personas.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="directorio_update">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Grupo familiar -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Grupo Familiar"
+          data-desc="Carga los datos del grupo familiar de tus empleados" data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-info"><i class="bi bi-person-heart"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Grupo Familiar</div>
+              <div class="text-muted small mb-3">
+                Carga los datos del grupo familiar de tus empleados.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: grupo_familiar.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="grupo-familiar">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de contacto de emergencia -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Contactos de Emergencia"
+          data-desc="Carga los datos de los contactos de emergencia de tus empleados" data-section="emergencia">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-info"><i class="bi bi-person-heart"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Contactos de Emergencia
+              </div>
+              <div class="text-muted small mb-3">
+                Carga los datos de los contactos de emergencia de tus empleados.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: contactos_emergencia.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="emergencia">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Datos Bancarios -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Datos Bancarios" data-desc="Carga de Datos Bancarios"
+          data-section="bancario">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-diagram-3"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Datos Bancarios</div>
+              <div class="text-muted small mb-3">Carga de datos bancarios.</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: datos_bancarios.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="bancario">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Méritos y Deméritos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Méritos y Deméritos"
+          data-desc="Carga de Méritos y Deméritos" data-section="meritos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-diagram-3"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Carga de Méritos y Deméritos</div>
+              <div class="text-muted small mb-3">
+                Carga de méritos y deméritos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: meritos.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="meritos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Capacitaciones y Certificaciones -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Capacitaciones y Certificaciones"
+          data-desc="Carga de Capacitaciones y Certificaciones" data-section="capacitaciones">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-diagram-3"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Capacitaciones y Certificaciones
+              </div>
+              <div class="text-muted small mb-3">
+                Carga de capacitaciones y certificaciones.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: capacitaciones.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="capacitaciones">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Retenciones Judiciales -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Retenciones Judiciales"
+          data-desc="Carga las retenciones judiciales activas de los colaboradores" data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-diagram-3"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Retenciones Judiciales
+              </div>
+              <div class="text-muted small mb-3">
+                Carga las Retenciones Judiciales activas de tus empresas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: retenciones.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="retenciones">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Préstamos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Cuentas Corrientes Masivo"
+          data-desc="Carga cuentas corrientse masivas de los colaboradores" data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-cash-stack"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Cuentas Corrientes a Nómina
+              </div>
+              <div class="text-muted small mb-3">
+                Carga de registros de Cuentas Corrientes.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: cuentas_corrientes.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="prestamos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Cronograma de Préstamos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de Cronograma de Préstamos Masivo"
+          data-desc="Carga de préstamos masivos de los colaboradores" data-section="personas">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-warning"><i class="bi bi-cash-stack"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Cronograma de Cuentas Corrientes
+              </div>
+              <div class="text-muted small mb-3">
+                Carga de registros de Cuentas Corrientes.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: cuentas_corrientes.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="cronograma-prestamos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección: Carga de ausentismos -->
+  <div class="mb-4 section-wrapper" data-section="ausentismos">
+    <div class="d-flex align-items-center mb-2">
+      <h3 class="section-title">Carga de ausentismos</h3>
+      <h3 class="ms-2 badge text-bg-light fs-3">5</h3>
+    </div>
+
+    <div class="row g-3">
+      <!-- Card: Licencias / faltas -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Licencia" data-desc="Carga masiva de Licencias / Faltas"
+          data-section="ausentismos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-clock-history"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Licencias y Vacaciones del mes</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de licencias.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: licencias.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="licencias">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Tardanzas -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Tardanzas" data-desc="Carga masiva de tardanzas"
+          data-section="ausentismos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-clock-history"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Tardanzas</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de tardanzas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: tardanzas.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="tardanzas">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Sobretiempo -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Sobretiempos" data-desc="Carga masiva de sobretiempos"
+          data-section="ausentismos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-clock-history"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Sobretiempos</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de sobretiempos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: sobretiempos.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="sobretiempos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Adelantos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Adelantos" data-desc="Carga masiva de adelantos"
+          data-section="ausentismos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-cash"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Adelantos</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de adelantos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: adelantos.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="adelantos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Vacaciones -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Vacaciones" data-desc="Carga masiva de vacaciones"
+          data-section="ausentismos">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-success"><i class="bi bi-umbrella"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">Vacaciones históricas</div>
+              <div class="text-muted small mb-3">
+                Carga masiva de vacaciones.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: vacaciones.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="vacaciones">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+                <button id="btnCalculoMasivo" class="btn btn-sm btn-primary">
+                  <i class="bi bi-clock-history me-1"></i>Cálculo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Carga de Días Festivos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100" data-title="Carga de vacaciones consolidadas"
+          data-desc="Carga masiva de vacaciones consolidadas" data-section="empresa">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-success">
+              <i class="bi bi-calendar-event"></i>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">
+                Carga de Vacaciones Consolidadas
+              </div>
+              <div class="text-muted small mb-3">
+                Carga masiva de vacaciones consolidadas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: vacaciones_consolidadas.xlsx</span>
+                <button class="btn btn-sm btn-primary" data-bulk-key="holidays">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    <!-- Card: Actualizacion de Directorio -->
+  </div>
+</div>
+
+<!-- Sección: Datos de nómina -->
+<div class="mb-5 section-wrapper" data-section="nomina">
+  <div class="d-flex align-items-center mb-2">
+    <h3 class="section-title">Carga de datos de nómina</h3>
+    <h3 class="ms-2 badge text-bg-light fs-3">6</h3>
+  </div>
+
+  <div class="row g-3">
+    <!-- Card: Catálogo de Nómina -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Carga de Nomina" data-desc="Carga el listado de nómina"
+        data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-dark"><i class="bi bi-list-check"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">Carga de Nomina</div>
+            <div class="text-muted small mb-3">
+              Carga el listado de datos relacionados a los conceptos.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: Nomina.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="Nomina">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Carga masiva de conceptos por período -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Carga de conceptos en período"
+        data-desc="Aplica conceptos por período a los empleados" data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-primary"><i class="bi bi-calendar2-week"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">
+              Carga de montos variables en período
+            </div>
+            <div class="text-muted small mb-3">
+              Aplicación de conceptos por período a los empleados.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: conceptos_periodo.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="conceptos-periodo">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Carga masiva de conceptos históricos período -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Carga de conceptos históricos"
+        data-desc="Aplica conceptos por período a los empleados" data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-primary"><i class="bi bi-calendar2-week"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">Carga de conceptos históricos</div>
+            <div class="text-muted small mb-3">
+              Aplicación de conceptos histórico de los empleados.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: conceptos_historicos.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="conceptos-historico">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Carga masiva de conceptos históricos período -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Carga de conceptos de liquidacion"
+        data-desc="Liquidacion - Conceptos" data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-primary"><i class="bi bi-calendar2-week"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">
+              Carga de conceptos de liquidacion
+            </div>
+            <div class="text-muted small mb-3">
+              Aplicación de conceptos histórico de los empleados.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: conceptos_historicos.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="liquidacion-conceptos">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Carga masiva de conceptos históricos período -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Bonificaciones" data-desc="Bonificaciones" data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-primary"><i class="bi bi-calendar2-week"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">Bonificaciones</div>
+            <div class="text-muted small mb-3">
+              Carga de bonos de los empleados en nómina.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: bonos.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="bonos">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Carga masiva de conceptos históricos período -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="card card-bulk h-100" data-title="Códigos PLAME" data-desc="Códigos PLAME" data-section="nomina">
+        <div class="card-body d-flex gap-3 align-items-start">
+          <div class="text-primary"><i class="bi bi-calendar2-week"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-semibold mb-1">Códigos PLAME</div>
+            <div class="text-muted small mb-3">
+              Carga de códigos PLAME a los conceptos.
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="small text-muted">Plantilla: codigos_plame.xlsx</span>
+              <button class="btn btn-sm btn-primary" data-bulk-key="plame">
+                <i class="bi bi-upload me-1"></i>Cargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección: TEST CARGAS MASIVAS -->
+  <div class="mb-4 section-wrapper" data-section="test">
+    <div class="d-flex align-items-center mb-2">
+      <h3 class="section-title text-danger">TEST CARGAS MASIVAS</h3>
+      <h3 class="ms-2 badge text-bg-danger fs-3">3</h3>
+    </div>
+
+    <div class="row g-3">
+      <!-- Card: TEST - Carga de Contratos -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100 border-danger" data-title="TEST - Carga de Contratos"
+          data-desc="Sección de pruebas para carga masiva de contratos" data-section="test">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-file-text"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">TEST - Carga de Contratos</div>
+              <div class="text-muted small mb-3">
+                Sección de pruebas para validar la carga de contratos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: test_contratos.xlsx</span>
+                <button class="btn btn-sm btn-outline-danger" data-bulk-key="test_contratos">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: TEST - Carga de Personas -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100 border-danger" data-title="TEST - Carga de Personas"
+          data-desc="Sección de pruebas para carga masiva de personas" data-section="test">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">TEST - Carga de Personas</div>
+              <div class="text-muted small mb-3">
+                Sección de pruebas para validar la carga de personas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: test_personas.xlsx</span>
+                <button class="btn btn-sm btn-outline-danger" data-bulk-key="test_personas">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: TEST - Carga de Posiciones -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100 border-danger" data-title="TEST - Carga de Posiciones"
+          data-desc="Sección de pruebas para carga masiva de posiciones/puestos" data-section="test">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-briefcase"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">TEST - Carga de Posiciones</div>
+              <div class="text-muted small mb-3">
+                Sección de pruebas para validar la carga de posiciones/puestos.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: test_posiciones.xlsx</span>
+                <button class="btn btn-sm btn-outline-danger" data-bulk-key="test_posiciones">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card: TEST - Carga de Personas -TEST -->
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card card-bulk h-100 border-danger" data-title="TEST - Carga de Personas -TEST"
+          data-desc="Sección de pruebas para carga masiva de personas" data-section="test">
+          <div class="card-body d-flex gap-3 align-items-start">
+            <div class="text-danger"><i class="bi bi-people"></i></div>
+            <div class="flex-grow-1">
+              <div class="fw-semibold mb-1">TEST - Carga de Personas - TEST</div>
+              <div class="text-muted small mb-3">
+                Sección de pruebas para validar la carga de personas.
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Plantilla: test_personas.xlsx</span>
+                <button class="btn btn-sm btn-outline-danger" data-bulk-key="test_personas_test">
+                  <i class="bi bi-upload me-1"></i>Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+     MODAL REUTILIZABLE (DROPZONE)
+======================= -->
+<div class="modal fade" id="modalBulk" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="bulkModalTitle" class="modal-title">Título</h5>
+        <button type="button" class="btn btn-icon" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p id="bulkModalSubtitle" class="mb-3 text-gray-700">
+          Descripción corta del proceso.
+        </p>
+        <ol id="bulkModalInstructions" class="mb-4 small"></ol>
+
+        <!-- Dropzone -->
+        <form id="bulkDropzone" class="dropzone border rounded-3 bg-light-subtle" style="min-height: 180px">
+          <div class="dz-message needsclick p-5 text-center">
+            <i class="bi bi-cloud-upload fs-1 d-block mb-2"></i>
+            <span class="d-block mb-1">Arrastra tu archivo aquí o haz clic para seleccionarlo</span>
+            <small class="text-muted d-block">Formatos: .xlsx, .xls, .csv — Máx. 10 MB</small>
+          </div>
+        </form>
+
+        <!-- Estado -->
+        <div id="bulkStatus" class="mt-3 d-none">
+          <div class="alert alert-info py-2 mb-2">
+            <strong>Archivo:</strong> <span id="bulkFileName">—</span>
+          </div>
+          <div id="bulkValidation" class="small text-muted"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer justify-content-between">
+        <div class="d-flex flex-wrap gap-3">
+          <a id="btnExcel" href="#" class="link-primary">
+            <i class="bi bi-file-earmark-excel"></i> Descargar plantilla
+          </a>
+          <!-- <a id="bulkGenerateTpl" class="link-primary" href="#"><i class="bi bi-gear"></i> Generar plantilla</a> -->
+          <a id="bulkDownloadTpl" class="link-primary" href="#" download hidden><i class="bi bi-download"></i> Descargar
+            plantilla</a>
+          <a id="bulkHelp" class="link-secondary" href="#" target="_blank"><i class="bi bi-info-circle"></i> Cómo
+            llenar</a>
+          <span id="bulkLastUpdated" class="text-muted small"></span>
+        </div>
+        <div class="d-flex gap-2">
+          <button id="bulkUploadBtn" type="button" class="btn btn-primary" disabled>
+            <i class="bi bi-upload me-2"></i>Subir y procesar
+          </button>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast de éxito -->
+<div class="toast align-items-center text-bg-primary border-0 position-fixed bottom-0 end-0 m-3" id="toastSuccess"
+  role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      ¡Carga completada! Se insertaron
+      <span id="toastInsertados"></span> registros correctamente.
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+      aria-label="Close"></button>
+  </div>
+</div>
+
+{{incluidos}} {{incluidos_cargamasiva}}
+
+<script>
+  // Evento de clic para el botón de cálculo masivo en vacaciones
+  $("#btnCalculoMasivo")
+    .off("click")
+    .on("click", async function () {
+      try {
+        // await callAPI({
+        //     endpoint: 'tempo/massivecalculatevacation',
+        //     method: 'POST',
+        //     body: {}
+        // });
+
+        await callAPI({
+          method: "tempo/massivecalculatevacation",
+          post: true,
+          params: {},
+        });
+
+        Swal.fire({
+          icon: "success",
+          title: "Cálculo realizado",
+          timer: 1800,
+          showConfirmButton: false,
+        });
+      } catch (err) {
+        Swal.fire({
+          icon: "error",
+          title: "Error realizando el cálculo",
+        });
+      }
+    });
+
+  // ========== FILTRADO CORREGIDO ==========
+
+  // Elementos DOM
+  const txtSearch = document.getElementById("txtSearch");
+  const selCategory = document.getElementById("selCategory");
+  const cards = document.querySelectorAll(".card-bulk");
+  const sections = document.querySelectorAll(".section-wrapper");
+
+  // Función de filtrado
+  function applyFilters() {
+    const searchText = (txtSearch.value || "").trim().toLowerCase();
+    const selectedCategory = selCategory.value || "ALL";
+
+    let totalVisible = 0;
+
+    // 1. Filtrar cards individuales
+    cards.forEach((card) => {
+      const title = (card.dataset.title || "").toLowerCase();
+      const desc = (card.dataset.desc || "").toLowerCase();
+      const section = card.dataset.section || "";
+
+      // Verificar coincidencias
+      const matchesText =
+        !searchText || title.includes(searchText) || desc.includes(searchText);
+      const matchesCategory =
+        selectedCategory === "ALL" || section === selectedCategory;
+
+      const shouldShow = matchesText && matchesCategory;
+
+      // Ocultar/mostrar la card (a través de su contenedor padre)
+      const cardContainer = card.closest(".col-12");
+      if (cardContainer) {
+        cardContainer.classList.toggle("is-hidden", !shouldShow);
+        if (shouldShow) totalVisible++;
+      }
+    });
+
+    // 2. Filtrar secciones (ocultar si no tienen cards visibles)
+    sections.forEach((section) => {
+      // Buscar cards dentro de esta sección
+      const cardsInSection = section.querySelectorAll(".card-bulk");
+      let hasVisibleCards = false;
+
+      cardsInSection.forEach((card) => {
+        const cardContainer = card.closest(".col-12");
+        if (cardContainer && !cardContainer.classList.contains("is-hidden")) {
+          hasVisibleCards = true;
+        }
+      });
+
+      // Ocultar/mostrar sección
+      section.classList.toggle("is-hidden", !hasVisibleCards);
+
+      // (OPCIONAL) Actualizar contador de la sección si quieres
+      // const badge = section.querySelector('.badge');
+      // if (badge) {
+      //     const visibleInSection = section.querySelectorAll('.col-12:not(.is-hidden)').length;
+      //     badge.textContent = visibleInSection;
+      // }
+    });
+
+    console.log(
+      `Filtro aplicado: "${searchText}" | Categoría: ${selectedCategory} | Visibles: ${totalVisible}`,
+    );
+  }
+
+  // Event listeners
+  if (txtSearch) {
+    txtSearch.addEventListener("input", applyFilters);
+    // También disparar al cargar la página si hay texto
+    txtSearch.addEventListener("keyup", applyFilters);
+  }
+
+  if (selCategory) {
+    selCategory.addEventListener("change", applyFilters);
+  }
+
+  // Aplicar filtros iniciales
+  applyFilters();
+
+  // ========== FIN DEL FILTRADO ==========
+
+  /* ============== Config (Tardanzas + Vacaciones acumuladas) ============== */
+  const BULK_CONFIG = {
+    mstr_persons: {
+      title: "Carga de Personas",
+      subtitle:
+        "Carga la lista de personas.",
+      instructions: [
+        "En la columna -tipo_documento- se debe especificar el tipo de documento (requerido, numérico). Valores permitidos: 1 = DNI, 2 = Carné Extranjería, 3 = RUC, 4 = Pasaporte, 5 = Carné Solic. Refugio, 6 = Partida Nacimiento, 7 = Carné Identidad RREE, 8 = PTP, 9 = Doc. Identidad Extranjero, 10 = Carné Permiso Temp. Permanencia.",
+        "En la columna -numero_documento- se debe especificar el número de documento de identidad del empleado (requerido).",
+        "En la columna -primer_nombre- se debe especificar el primer nombre (requerido).",
+        "En la columna -apellido_paterno- se debe especificar el apellido paterno (requerido).",
+        "En la columna -segundo_nombre- se debe especificar el segundo nombre (opcional).",
+        "En la columna -apellido_materno- se debe especificar el apellido materno (opcional).",
+        "En la columna -nacionalidad- se debe indicar la nacionalidad (opcional).",
+        "En la columna -fecha_nacimiento- se debe especificar la fecha de nacimiento (opcional, formato compatible: YYYY-MM-DD).",
+        "En la columna -genero- se debe especificar el género (opcional, valores: M = Masculino, F = Femenino).",
+        "En la columna -tiene_hijos- se debe indicar si tiene hijos (opcional, numérico, 0 = no, 1 = sí).",
+        "En la columna -email- se debe ingresar el correo electrónico (opcional, formato email).",
+        "En la columna -telefono- se debe registrar el número telefónico (opcional, formato teléfono).",
+        "En la columna -departamento- se debe especificar el departamento de la dirección (opcional).",
+        "En la columna -provincia- se debe especificar la provincia de la dirección (opcional).",
+        "En la columna -distrito- se debe especificar el distrito de la dirección (opcional).",
+        "En la columna -tipo_via- se debe indicar el tipo de vía (opcional).",
+        "En la columna -nombre_via- se debe especificar el nombre de la vía (opcional).",
+        "En la columna -numero- se debe indicar el número de la dirección (opcional).",
+        "En la columna -tipo_zona- se debe especificar el tipo de zona (opcional).",
+        "En la columna -nombre_zona- se debe indicar el nombre de la zona (opcional).",
+        "En la columna -direccion_zona- se debe especificar la dirección de la zona (opcional).",
+        "En la columna -direccion_completa- se debe registrar la dirección completa (opcional).",
+        "En la columna -referencia- se debe ingresar una referencia de la dirección (opcional).",
+      ],
+
+
+      template: {
+        downloadUrl: "/static/templates/mstr_personas.xlsx",
+        generateEndpoint: "/api/bulk/personas/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_persons_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["numero_documento"],
+      //uploadEndpoint: 'contratos/uploadfiledirectory',
+      uploadEndpoint: "gestionvirtual/persons_massive",
+      helpUrl: "/ayuda/personas",
+
+    },
+    work_places: {
+      title: "Carga de plazas",
+      subtitle:
+        "Carga la lista de plazas de la organización.",
+      instructions: [
+        "En la columna -codigo_interno- se debe especificar el código interno único de la plaza.",
+        "En la columna -nombre- se debe especificar el nombre de la plaza.",
+        "En la columna -descripcion- se debe especificar la descripción de la plaza.",
+        "En la columna -empresa- se debe especificar el identificador de la empresa a la que pertenece la plaza.",
+        "En la columna -centro_costo- se debe especificar el identificador del centro de costo al que pertenece la plaza.",
+        "En la columna -puesto- se debe especificar el identificador del puesto al que pertenece la plaza.",
+        "En la columna -unidad- se debe especificar el identificador de la unidad al que pertenece la plaza.",
+        "En la columna -ocupacion- se debe especificar el identificador de la ocupación al que pertenece la plaza.",
+      ],
+
+
+      template: {
+        downloadUrl: "/static/templates/mstr_personas.xlsx",
+        generateEndpoint: "/api/bulk/personas/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_work_places_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo_interno"],
+      //uploadEndpoint: 'contratos/uploadfiledirectory',
+      uploadEndpoint: "gestionvirtual/work_places_massive",
+      helpUrl: "/ayuda/plazas",
+
+    },
+    personas: {
+      title: "Carga de Relación Laboral",
+      subtitle:
+        "Carga la lista de personas que se relacionan con tu organización.",
+      instructions: [
+        "En la columna -numero_documento- se debe especificar el número de documento de identidad del empleado.",
+        "En la columna -codigo_contrato- se debe especificar el código único del contrato.",
+        "En la columna -estado- se debe indicar si el empleado está activo o inactivo.",
+        "En la columna -fecha_ingreso_primera- se debe especificar la fecha del primer ingreso del empleado.",
+        "En la columna -fecha_inicio- se debe especificar la fecha de inicio del contrato actual.",
+        "En la columna -fecha_fin- se debe especificar la fecha de finalización del contrato actual.",
+        "En la columna -fecha_cese- se debe especificar la fecha en la que se produjo el cese laboral (si aplica).",
+        "En la columna -sueldo_base- se debe ingresar el sueldo base mensual del empleado.",
+        "En la columna -periodo_prueba- se debe indicar el periodo de prueba establecido en el contrato.",
+        "En la columna -tiene_movilidad- se debe indicar si el empleado recibe movilidad (1 = sí, 0 = no).",
+        "En la columna -monto_movilidad- se debe indicar el monto asignado por movilidad.",
+        "En la columna -tiene_tarjeta_alimentos- se debe indicar si el empleado recibe tarjeta de alimentos (1 = sí, 0 = no).",
+        "En la columna -monto_tarjeta_alimentos- se debe registrar el monto mensual de la tarjeta de alimentos.",
+        "En la columna -tiene_eps- se debe indicar si el empleado cuenta con un seguro EPS (1 = sí, 0 = no).",
+        "En la columna -tiene_oncologico- se debe indicar si el empleado tiene seguro oncológico (1 = sí, 0 = no).",
+        "En la columna -id_tipo_documento- se debe ingresar el identificador del tipo de documento usado por el empleado.",
+        "En la columna -primer_nombre- se debe especificar el primer nombre del empleado.",
+        "En la columna -segundo_nombre- se debe especificar el segundo nombre del empleado (si existe).",
+        "En la columna -apellido_paterno- se debe registrar el apellido paterno del empleado.",
+        "En la columna -apellido_materno- se debe registrar el apellido materno del empleado.",
+        "En la columna -email_personal- se debe ingresar el correo personal del empleado.",
+        "En la columna -telefono- se debe registrar el número telefónico del empleado.",
+        "En la columna -fecha_nacimiento- se debe especificar la fecha de nacimiento del empleado.",
+        "En la columna -nacionalidad- se debe indicar la nacionalidad del empleado.",
+        "En la columna -id_estado_civil- se debe ingresar el identificador del estado civil.",
+        "En la columna -estado_civil- se debe registrar el estado civil del empleado.",
+        "En la columna -genero- se debe especificar el género del empleado.",
+        "En la columna -idioma- se debe especificar el idioma principal del empleado.",
+        "En la columna -direccion- se debe registrar la dirección del domicilio.",
+        "En la columna -pais- se debe indicar el país de residencia.",
+        "En la columna -departamento- se debe registrar el departamento del domicilio.",
+        "En la columna -provincia- se debe registrar la provincia correspondiente.",
+        "En la columna -distrito- se debe registrar el distrito correspondiente.",
+        "En la columna -id_tipo_calle- se debe ingresar el tipo de vía (calle, avenida, jirón, etc.).",
+        "En la columna -nombre_calle- se debe especificar el nombre de la calle.",
+        "En la columna -numero_calle- se debe registrar el número de la vivienda.",
+        "En la columna -id_tipo_zona- se debe especificar el tipo de zona (urbana, rural, etc.).",
+        "En la columna -nombre_zona- se debe registrar el nombre de la zona.",
+        "En la columna -referencia- se debe ingresar una referencia adicional del domicilio.",
+        "En la columna -id_ocupacion- se debe registrar el identificador de la ocupación.",
+        "En la columna -id_puesto- se debe registrar el identificador del puesto.",
+        "En la columna -id_area- se debe registrar el identificador del área.",
+        "En la columna -email_corporativo- se debe ingresar el correo corporativo del empleado.",
+        "En la columna -cci- se debe registrar el código de cuenta interbancaria del empleado.",
+        "En la columna -id_banco- se debe especificar el identificador del banco.",
+        "En la columna -banco- se debe indicar el nombre del banco.",
+        "En la columna -tiene_hijos- se debe indicar si el empleado tiene hijos registrados (1 = sí, 0 = no).",
+        "En la columna -id_sistema_pension- se debe ingresar el sistema de pensiones al que pertenece el empleado.",
+        "En la columna -sistema_pension- se debe especificar el nombre del sistema de pensiones.",
+        "En la columna -modalidad_comision- se debe indicar la modalidad de comisión aplicable.",
+        "En la columna -cuspp- se debe registrar el código único de afiliación previsional.",
+        "En la columna -fecha_afiliacion_pension- se debe especificar la fecha de afiliación al sistema de pensiones.",
+        "En la columna -tipo_contrato- se debe indicar el tipo de contrato del empleado.",
+        "En la columna -id_empresa- se debe ingresar el identificador de la empresa.",
+        "En la columna -moneda- se debe indicar la moneda aplicable.",
+        "En la columna -aportes_empleador- se debe registrar los aportes del empleador.",
+        "En la columna -codigo_sede- se debe registrar el código de la sede.",
+        "En la columna -nombre_sede- se debe registrar el nombre de la sede.",
+        "En la columna -codigo_departamento- se debe indicar el código del departamento organizacional.",
+        "En la columna -nombre_departamento- se debe indicar el nombre del departamento.",
+        "En la columna -id_departamento- se debe registrar el identificador del departamento.",
+        "En la columna -codigo_area- se debe especificar el código del área.",
+        "En la columna -nombre_area- se debe registrar el nombre del área.",
+        "En la columna -codigo_seccion- se debe especificar el código de la sección.",
+        "En la columna -nombre_seccion- se debe registrar el nombre de la sección.",
+        "En la columna -codigo_centro_costo- se debe ingresar el código del centro de costos.",
+        "En la columna -nombre_centro_costo- se debe ingresar el nombre del centro de costos.",
+        "En la columna -codigo_puesto- se debe registrar el código del puesto.",
+        "En la columna -nombre_puesto- se debe registrar el nombre del puesto.",
+        "En la columna -codigo_unidad- se debe registrar el código de la unidad.",
+        "En la columna -nombre_unidad- se debe registrar el nombre de la unidad.",
+        "En la columna -codigo_ocupacion- se debe registrar el código de la ocupación.",
+        "En la columna -nombre_ocupacion- se debe registrar el nombre de la ocupación.",
+        "En la columna -id_motivo_cese- se debe indicar el motivo de cese.",
+        "En la columna -motivo_cese- se debe especificar la descripción del motivo de cese.",
+        "En la columna -activo- se debe indicar si el registro se encuentra activo.",
+      ],
+
+      template: {
+        downloadUrl: "/static/templates/Carga_personas.xlsx",
+        generateEndpoint: "/api/bulk/personas/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generatedirectory_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      //uploadEndpoint: 'contratos/uploadfiledirectory',
+      uploadEndpoint: "gestionvirtual/directory_massive",
+      helpUrl: "/ayuda/personas",
+    },
+
+    "grupo-familiar": {
+      title: "Carga de Grupo familiar",
+      subtitle: "Carga los datos del grupo familiar de tus empleados.",
+      instructions: [
+        "En la columna -Nombre completo- se debe especificar el Nombre y apellidos completos de la persona.",
+        "En la columna -Número de documento- se debe especificar el Número del documento de identidad.",
+        "En la columna -Relación- se debe especificar el Tipo de vínculo con el empleado (hijo, cónyuge, padre, etc.).",
+        "En la columna -Fecha de nacimiento- se debe especificar el Fecha de nacimiento de la persona.",
+        "En la columna -Teléfono principal- se debe especificar el Número de teléfono de contacto principal.",
+        "En la columna -Teléfono secundario- se debe especificar el Número de teléfono alternativo o adicional.",
+        "En la columna -Correo principal- se debe especificar el Dirección de correo electrónico principal.",
+        "En la columna -Es dependiente- se debe especificar el Indica si la persona depende económicamente del empleado (1 = sí, 0 = no).",
+        "En la columna -Es beneficiario- se debe especificar el Indica si la persona es beneficiaria de algún seguro o prestación (1 = sí, 0 = no).",
+        "En la columna -Observaciones- se debe especificar el Campo libre para comentarios o notas relevantes sobre la persona.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/grupo_familiar.xlsx",
+        generateEndpoint: "/api/bulk/grupo-familiar/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_grupofam_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "gestionvirtual/familymassive",
+      helpUrl: "/ayuda/grupo-familiar",
+    },
+
+    emergencia: {
+      title: "Carga de Contactos de Emergencia",
+      subtitle:
+        "Carga los datos de los contactos de emergencia de tus empleados.",
+      instructions: [
+        "En la columna -Documento colaborador- se debe especificar el documento del trabajador.",
+        "En la columna -Nombre contacto- se debe especificar el Nombre y apellidos completos del contacto de emergencia.",
+        "En la columna -Documento contacto- se debe especificar el Número del documento de identidad del contacto de emergencia.",
+        "En la columna -Relación- se debe especificar el Tipo de vínculo con el empleado (hijo, cónyuge, padre, etc.).",
+        "En la columna -Fecha de nacimiento- se debe especificar el Fecha de nacimiento de la persona.",
+        "En la columna -Teléfono principal- se debe especificar el Número de teléfono de contacto principal.",
+        "En la columna -Teléfono secundario- se debe especificar el Número de teléfono alternativo o adicional.",
+        "En la columna -Correo principal- se debe especificar el Dirección de correo electrónico principal.",
+        "En la columna -Observaciones- se debe especificar el Campo libre para comentarios o notas relevantes sobre la persona.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/grupo_familiar.xlsx",
+        generateEndpoint: "/api/bulk/grupo-familiar/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_emergency_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "gestionvirtual/emergencymassive",
+      helpUrl: "/ayuda/grupo-familiar",
+    },
+
+    bancario: {
+      title: "Datos Bancarios",
+      subtitle:
+        "Carga masiva de los registros de datos bancarios de colaboradores.",
+      instructions: [
+        "En la columna -Documento de identidad- se debe especificar el documento del trabajador.",
+        "En la columna -Entidad bancaria- se debe especificar el Nombre del banco donde se encuentra la cuenta del empleado.",
+        "En la columna -Tipo de cuenta bancaria- se debe especificar el Clasificación de la cuenta (por ejemplo, sueldo, CTS, ahorros, corriente, etc.).",
+        "En la columna -Número de cuenta- se debe especificar el Código o número asignado por el banco para la cuenta.",
+        "En la columna -CCI (Código de Cuenta Interbancaria)- se debe especificar el Número único que identifica la cuenta en el sistema bancario nacional para transferencias entre bancos.",
+        "En la columna -Tipo de moneda- se debe especificar el Moneda en la que opera la cuenta (por ejemplo, PEN, USD, EUR).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/retenciones.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_bancarios_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/cargar_cuentas_bancarias",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    capacitaciones: {
+      title: "Capacitaciones y Certificaciones",
+      subtitle:
+        "Carga el detalle de las Capacitaciones y Certificaciones de tus colaboradores.",
+      instructions: [
+        "En la columna -documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -tipo de capacitacion- se debe especificar el tipo de formación (académica, curso, certificación, entrenamiento interno, etc.).",
+        "En la columna -titulo- se debe especificar el nombre del curso, certificado o programa realizado.",
+        "En la columna -institucion- se debe especificar la entidad que dictó la capacitación.",
+        "En la columna -fecha_inicio- se debe especificar el día en que comenzó la capacitación.",
+        "En la columna -fecha_fin- se debe especificar el día en que terminó la capacitación.",
+        "En la columna -fecha_capacitacion- se debe especificar el día específico de la capacitación cuando no es un rango (a veces se usa para talleres de un solo día).",
+        "En la columna -duracion_horas- se debe especificar la cantidad total de horas que duró la capacitación.",
+        "En la columna -estado- se debe especificar si la capacitación está en curso, completada, expirada o válida.",
+        "En la columna -url_certificado- se debe especificar el enlace al archivo o documento del certificado obtenido.",
+        "En la columna -observacion- se debe especificar notas adicionales sobre la capacitación.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/relaciones.xlsx",
+        generateEndpoint: "/api/bulk/relaciones/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_capacitaciones_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "gestionvirtual/trainingmassive",
+      helpUrl: "/ayuda/relaciones",
+    },
+
+    meritos: {
+      title: "Méritos y Deméritos",
+      subtitle:
+        "Carga de los métodos y deméritos de los colaboradores de tu organización.",
+      instructions: [
+        "En la columna -documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -Tipo de registro- se debe especificar el si es un MERITO o un DEMERITO.",
+        "En la columna -Categoria- se debe especificar el la clasificación del mérito/demérito (por ejemplo: puntualidad, conducta, desempeño).",
+        "En la columna -fecha de registro- se debe especificar el el día en que ocurrió o se registró el evento.",
+        "En la columna -descripcion- se debe especificar el el detalle escrito del mérito o demérito.",
+        "En la columna -responsable- se debe especificar el si la persona que registró o reportó el evento.",
+        "En la columna -conteo de recurrencias- se debe especificar el número de veces que se ha repetido este evento.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/relaciones.xlsx",
+        generateEndpoint: "/api/bulk/relaciones/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_meritos_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "gestionvirtual/meritsmassive",
+      helpUrl: "/ayuda/relaciones",
+    },
+
+    vacaciones: {
+      title: "Vacaciones",
+      subtitle: "Carga masiva de vacaciones.",
+      instructions: [
+        "En la columna -documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -contrato- se debe especificar el código de contrato.",
+        "En la columna -situacion_trabajador- se debe especificar la situacion actual del trabajador (Activo, Anulado).",
+        "En la columna -estado_solicitud- se debe especificar el estado de la solicitud (Aprobado, pendiente).",
+        'En la columna -periodo- se debe especificar el periodo relacionado a las vacaciones. Ejemplo: "2021 - 2022".',
+        "En la columna -tipo_procedimiento- se debe especificar el tipo de procedimiento (Vacaciones u otros).",
+        "En la columna -codigo_tipo_vacaciones- se debe especificar el código de tipo de vacaciones (NRE, REM, TRA o PRO).",
+        "En la columna -tipo_vacaciones- se debe especificar el tipo de vacaciones (Compensables, Remuneradas, Trabajadas o Programadas.",
+        "En la columna -fecha_inicio- se debe especificar la fecha de inicio de las vacaciones.",
+        "En la columna -fecha_fin- se debe especificar la fecha fin de las vacaciones.",
+        "En la columna -dias_calendario- se deben especificar los días calendario en el intervalo.",
+        "En la columna -dias_habiles- se deben especificar los días hábiles en el intervalo.",
+        "En la columna -año- se debe especificar el año en que se inicia el intervalo.",
+        "En la columna -mes- se debe especificar el mes en que inicia el intervalo.",
+        "En la columna -periodo_correlativo- se debe especificar el correlativo de solicitud por persona (0,1,2 en adelante).",
+        "En la columna -primera_fecha_inicio- se debe especificar la fecha de inicio de labores del trabajador .",
+        "En la columna -es_historico- se debe especificar si es un registro de carga histórica (1 o 0).",
+        "En la columna -jefe_aprobador- se debe especificar el jefe del colaborador que aprueba la solicitud.",
+        "En la columna -observaciones- se debe especificar alguna observación relacionada a las solicitudes.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/vacaciones.xlsx",
+        generateEndpoint: "/api/bulk/vacaciones/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generatevacation_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "tempo/vacationmassive",
+      helpUrl: "/ayuda/vacaciones",
+    },
+
+    tardanzas: {
+      title: "Tardanzas",
+      subtitle: "Carga masiva de tardanzas.",
+      instructions: [
+        "En la columna -Periodo- se debe especificar el periodo de la tardanza (en formato YYYMM).",
+        "En la columna -Tipo de Periodo- se debe especificar el tipo de periodo a registrar (Nómina, Gratificación, etc).",
+        "En la columna -Documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -fecha_evento- se debe especificar el Fecha en la que ocurrió la tardanza. Formato: YYYY-MM-DD.",
+        "En la columna -retraso_en_minutos- se debe especificar la cantidad total de minutos de tardanza. Ejemplo: 15.",
+        "En la columna -horas_retraso- se debe especificar las horas de retraso en formato: HH:MM:SS.",
+        "En la columna -monto_descuento- se debe especificar el Monto a descontar por la tardanza. Si no aplica, escribir 0.",
+        "En la columna -observacion- se debe especificar el Motivo o comentario opcional sobre la tardanza.",
+        "En la columna -es_activo- se debe especificar el indica si el registro está activo. 1 = activo, 0 = inactivo. Normalmente 1.",
+      ],
+      template: {
+        downloadUrl: "/filebrowser/Files/tardanzas.xlsx",
+        generateEndpoint: "/api/bulk/tardanzas/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generatetardiness_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["document_number"],
+      uploadEndpoint: "gestionvirtual/tardinessmassive",
+      helpUrl: "/ayuda/tardanzas",
+    },
+
+    licencias: {
+      title: "Licencias / Faltas",
+      subtitle: "Carga masiva de licencias o faltas.",
+      instructions: [
+        "En la columna -Periodo- se debe especificar el periodo de la licencia (en formato YYYMM).",
+        "En la columna -Tipo de Periodo- se debe especificar el tipo de periodo a registrar (Nómina, Gratificación, etc).",
+        "En la columna -Documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -Código_de_ausencia- se debe especificar el código de tipo de ausencia.",
+        "En la columna -Fecha_de_inicio- se debe especificar la fecha en que empieza la ausencia.",
+        "En la columna -Fecha_de_fin- se debe especificar la fecha en que termina la ausencia.",
+        "En la columna -Fecha_de_emisión- se debe especificar la fecha del documento sustentatorio (ej. CITT).",
+        "En la columna -Días- se debe especificar el número de días de ausencia (calculado o editable).",
+        "En la columna -Motivo- se debe especificar el texto explicativo del motivo de la ausencia.",
+        "En la columna -Estatus- se debe especificar si la ausencia está Pendiente (0), Aprobada (1) o Rechazada (2).",
+        "En la columna -Permite_sustitución- se debe especificar si se asignará reemplazo temporal.",
+        "En la columna -Justificado- se debe especificar si la ausencia tiene sustento válido.",
+        "En la columna -Activo- se debe especificar si el registro está vigente.",
+        "En la columna -Es_licencia- se debe especificar si es un tipo de licencia oficial (paternidad, maternidad, duelo).",
+        "En la columna -Especialidad- se debe especificar la especialidad del médico que emite el documento.",
+        "En la columna -Nombre_del_profesional- se debe especificar el nombre del médico o profesional firmante.",
+        "En la columna -CMP_del_profesional- se debe especificar el número de colegiatura médica del doctor.",
+        "En la columna -Documento_del_profesional- se debe especificar el documento de identidad del médico.",
+        "En la columna -Observaciones- se deben especificar comentarios u observaciones relacionadas a la licencia.",
+      ],
+      template: {
+        downloadUrl: "/filebrowser/Files/licencias.xlsx",
+        generateEndpoint: "/api/bulk/licencias/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generateabsence_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [
+        "period_directory_id",
+        "absence_code",
+        "start_date",
+        "end_date",
+      ],
+      uploadEndpoint: "tempo/absencemassive",
+      helpUrl: "/ayuda/licencias",
+    },
+
+    sobretiempos: {
+      title: "Sobretiempos",
+      subtitle: "Carga masiva de sobretiempos.",
+      instructions: [
+        "En la columna -Periodo- se debe especificar el periodo de la licencia (en formato YYYMM).",
+        "En la columna -Tipo de Periodo- se debe especificar el tipo de periodo a registrar (Nómina, Gratificación, etc).",
+        "En la columna -Documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -Horas- se debe especificar el Cantidad de horas trabajadas en exceso.",
+        "En la columna -Tipo_de_hora- se debe especificar el Tipo de sobretiempo (ej. 25%, 35%, 100%).",
+        "En la columna -Fecha- se debe especificar el Fecha en la que se realizó la hora extra.",
+        "En la columna -Tarifa_unitaria- se debe especificar el monto que se paga por una hora extra (según política).",
+        "En la columna -Importe_total- se debe especificar el resultado del cálculo: horas x tarifa.",
+        "En la columna -Observación- se debe especificar el comentario o motivo adicional. Campo libre.",
+        "En la columna -Activo- se debe especificar si el registro está vigente (1 o 0).",
+      ],
+      template: {
+        downloadUrl: "/filebrowser/Files/sobretiempos.xlsx",
+        generateEndpoint: "/api/bulk/sobretiempos/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generateovertime_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [
+        "period_directory_id",
+        "hours",
+        "hour_type",
+        "observation",
+        "created_at",
+      ],
+      uploadEndpoint: "gestionvirtual/overtimemassive",
+      helpUrl: "/ayuda/sobretiempos",
+    },
+
+    adelantos: {
+      title: "Adelantos",
+      subtitle: "Carga masiva de adelantos.",
+      instructions: [
+        "En la columna -Periodo- se debe especificar el periodo de la licencia (en formato YYYMM).",
+        "En la columna -Tipo de Periodo- se debe especificar el tipo de periodo a registrar (Nómina, Gratificación, etc).",
+        "En la columna -Documento_de_identidad- se debe especificar el documento del trabajador.",
+        "En la columna -Monto- se debe especificar el importe solicitado como anticipo.",
+        "En la columna -Fecha_de_entrega- se debe especificar el día en que se entregará el anticipo al colaborador.",
+        "En la columna -Estatus- se debe especificar el estado del anticipo: PENDING, APPROVED, REJECTED o PAID.",
+        "En la columna -Observación- se debe especificar los comentarios o motivo del anticipo. Campo libre.",
+        "En la columna -Activo- se debe especificar el Indica si el registro está vigente. Control interno.",
+      ],
+      template: {
+        downloadUrl: "/filebrowser/Files/adelantos.xlsx",
+        generateEndpoint: "/api/bulk/adelantos/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generateadvance_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [
+        "period_directory_id",
+        "amount",
+        "delivery_date",
+        "status",
+        "observation",
+      ],
+      uploadEndpoint: "gestionvirtual/advancesmassive",
+      helpUrl: "/ayuda/adelantos",
+    },
+
+    Nomina: {
+      title: "Nomina",
+      subtitle: "Carga el listado de personas en nómina en cada periodo.",
+      instructions: [
+        "En la columna -periodo- se debe especificar el Periodo de nómina en formato YYYYMM.",
+        "En la columna -tipo_de_periodo- se debe especificar el Tipo de periodo (ej. NOMINA, CTS, GRATIFICACION).",
+        "En la columna -codigo_de_unidad- se debe especificar el Código de la unidad organizacional.",
+        "En la columna -nombre_de_unidad- se debe especificar el Nombre de la unidad organizacional.",
+        "En la columna -id_tipo_documento- se debe especificar el Identificador del tipo de documento del colaborador.",
+        "En la columna -numero_de_documento- se debe especificar el Número de documento del colaborador.",
+        "En la columna -codigo_de_sede- se debe especificar el Código de la sede donde labora.",
+        "En la columna -nombre_de_sede- se debe especificar el Nombre de la sede donde labora.",
+        "En la columna -codigo_de_departamento- se debe especificar el Código del departamento organizacional.",
+        "En la columna -nombre_de_departamento- se debe especificar el Nombre del departamento organizacional.",
+        "En la columna -codigo_de_area- se debe especificar el Código del área organizacional.",
+        "En la columna -nombre_de_area- se debe especificar el Nombre del área organizacional.",
+        "En la columna -codigo_de_seccion- se debe especificar el Código de la sección organizacional.",
+        "En la columna -nombre_de_seccion- se debe especificar el Nombre de la sección organizacional.",
+        "En la columna -centro_de_coste- se debe especificar el Código del centro de coste.",
+        "En la columna -nombre_centro_de_coste- se debe especificar el Nombre del centro de coste.",
+        "En la columna -sistema_de_pensiones- se debe especificar el Sistema de pensiones del colaborador.",
+        "En la columna -cuspp- se debe especificar el CUSPP del colaborador.",
+        "En la columna -fecha_de_nacimiento- se debe especificar la Fecha de nacimiento en formato YYYY-MM-DD.",
+        "En la columna -fecha_inicio_original- se debe especificar la Fecha de inicio original del colaborador.",
+        "En la columna -fecha_de_cese- se debe especificar la Fecha de cese, si aplica.",
+        "En la columna -codigo_interno- se debe especificar el Código interno del colaborador.",
+        "En la columna -salario_base- se debe especificar el Salario base del colaborador.",
+        "En la columna -apellido_paterno- se debe especificar el Apellido paterno del colaborador.",
+        "En la columna -apellido_materno- se debe especificar el Apellido materno del colaborador.",
+        "En la columna -nombre- se debe especificar el Primer nombre del colaborador.",
+        "En la columna -segundo_nombre- se debe especificar el Segundo nombre, si corresponde.",
+        "En la columna -tiene_eps- se debe señalar si el colaborador cuenta con EPS (0 = No, 1 = Sí).",
+        "En la columna -modo_de_comision- se debe especificar el Modo de comisión del colaborador.",
+        "En la columna -tipo_de_contrato- se debe especificar el Tipo de contrato.",
+        "En la columna -tiene_tarjeta_de_alimentos- se debe indicar si tiene tarjeta de alimentos (0 = No, 1 = Sí).",
+        "En la columna -monto_tarjeta_alimentos- se debe especificar el monto asignado de tarjeta de alimentos.",
+        "En la columna -tiene_movilidad- se debe indicar si tiene movilidad (0 = No, 1 = Sí).",
+        "En la columna -monto_movilidad- se debe especificar el monto asignado por movilidad.",
+        "En la columna -codigo_de_puesto- se debe especificar el Código del puesto.",
+        "En la columna -nombre_de_puesto- se debe especificar el Nombre del puesto.",
+        "En la columna -tiene_hijos- se debe indicar si el colaborador tiene hijos (0 = No, 1 = Sí).",
+        "En la columna -es_lbs- se debe indicar si el registro es para liquidación o no (0 = No, 1 = Sí).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/conceptos.xlsx",
+        generateEndpoint: "/api/bulk/conceptos/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_nomina_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/period_directory_full_insert",
+      helpUrl: "/ayuda/conceptos",
+    },
+
+    "conceptos-periodo": {
+      title: "Montos Variables en período",
+      subtitle:
+        "Aplicación de conceptos variables por período a los empleados.",
+      instructions: [
+        "En la columna -SUELDO_TEORICO- se debe especificar el Salario teórico calculado para el periodo antes de ajustes.",
+        "En la columna -DIAS_TRABAJADOS- se debe especificar el Número total de días efectivamente trabajados en el periodo.",
+        "En la columna -HRS_TRABAJADOS- se debe especificar el Horas efectivamente trabajadas en el periodo.",
+        "En la columna -DIAS_MEDICOS- se debe especificar el Días cubiertos por descanso médico (con o sin subsidio).",
+        "En la columna -DIAS_SUBIDIOS- se debe especificar el Días subsidiados por ESSALUD o entidad correspondiente.",
+        "En la columna -HRS_EXT_25- se debe especificar el Horas extras pagadas con recargo de 25%.",
+        "En la columna -HRS_EXT_35- se debe especificar el Horas extras pagadas con recargo de 35%.",
+        "En la columna -HRS_DIA_DESC- se debe especificar el Horas correspondientes a días de descanso trabajados.",
+        "En la columna -HRS_FERIADO- se debe especificar el Horas trabajadas durante días feriados.",
+        "En la columna -HRS_BONIF_NOCTURNAS- se debe especificar el Horas calificadas como nocturnas con bonificación.",
+        "En la columna -DIAS_LIC_SIN_GOCE- se debe especificar el Días de licencia sin goce de haber.",
+        "En la columna -DIAS_LIC_CON_GOCE- se debe especificar el Días de licencia con goce de haber.",
+        "En la columna -DIAS_FALTAS- se debe especificar el Días de ausencia injustificada.",
+        "En la columna -HORAS_TARDANZA- se debe especificar el Horas totales de tardanza en el periodo.",
+        "En la columna -DIAS_SUSPENSION- se debe especificar el Días de suspensión laboral.",
+        "En la columna -DIAS_VAC_A_DESCONT- se debe especificar el Días de vacaciones pendientes o para descontar.",
+        "En la columna -MINUTOS_TARDANZA- se debe especificar el Minutos totales de tardanza.",
+        "En la columna -BASIC_SALARY- se debe especificar el Salario básico correspondiente al colaborador.",
+        "En la columna -DESCANSO_MEDICO- se debe especificar el Monto pagado por descanso médico.",
+        "En la columna -FAMILY_ALLOWANCE- se debe especificar el Monto por asignación familiar.",
+        "En la columna -REINT_ASIG_FAMILIAR- se debe especificar el Reintegro de asignación familiar.",
+        "En la columna -BONIF_EXTRAORDINARIA_MANUAL- se debe especificar el Bonificación extraordinaria ingresada manualmente.",
+        "En la columna -OVERTIME_25- se debe especificar el Monto pagado por horas extra al 25%.",
+        "En la columna -OVERTIME_35- se debe especificar el Monto pagado por horas extra al 35%.",
+        "En la columna -OVERTIME_100- se debe especificar el Monto pagado por horas extra al 100%.",
+        "En la columna -OVERTIME_FERIADO- se debe especificar el Monto pagado por horas extra realizadas en feriados.",
+        "En la columna -PREST_ALIM- se debe especificar el Monto asignado por prestación de alimentación.",
+        "En la columna -ASIG_BONIF_EDUCA- se debe especificar el Asignación o bonificación por educación.",
+        "En la columna -BONO_PRODUCCION- se debe especificar el Bonificación por productividad.",
+        "En la columna -LIC_CON_GOCE_HABER- se debe especificar el Monto correspondiente a licencias con goce.",
+        "En la columna -LICENCIA_PATERNIDAD- se debe especificar el Monto por licencia de paternidad.",
+        "En la columna -SUBS_POR_ENFERMEDAD- se debe especificar el Subsidio por enfermedad reconocido por la entidad.",
+        "En la columna -DSCTO_FALTA- se debe especificar el Descuento aplicado por faltas injustificadas.",
+        "En la columna -DSCTO_SUSPENSION- se debe especificar el Descuento aplicado por días de suspensión.",
+        "En la columna -VACACIONES- se debe especificar el Monto correspondiente a vacaciones tomadas.",
+        "En la columna -MOV_SUP_ASISTENCIA- se debe especificar el Monto adicional por movilidad o asistencia.",
+        "En la columna -BONIF_POR_REFERIDO- se debe especificar el Bonificación por referido contratado.",
+        "En la columna -TOTAL_HABERES- se debe especificar el Suma total de haberes del periodo.",
+        "En la columna -PRESTAMO- se debe especificar el Descuento por préstamos del empleador.",
+        "En la columna -DCTO_EPS- se debe especificar el Descuento por EPS asumido por el colaborador.",
+        "En la columna -DCTO_VIATICOS- se debe especificar el Descuento por viáticos pendientes de regularización.",
+        "En la columna -DTO_SEG_ONCOLOGICO- se debe especificar el Descuento por seguro oncológico.",
+        "En la columna -DCTO_CELULAR- se debe especificar el Descuento relacionado al uso de celular corporativo.",
+        "En la columna -DESC_PREST_ALIM- se debe especificar el Descuento de prestación de alimentos.",
+        "En la columna -DCTO_VEHICULAR- se debe especificar el Descuento por vehículo o asignaciones vehiculares.",
+        "En la columna -DCTO_FOTOCHECK- se debe especificar el Descuento por fotocheck o credencial.",
+        "En la columna -PENSION_AFP_APO- se debe especificar el Aporte obligatorio AFP del colaborador.",
+        "En la columna -PENSION_AFP_SEG- se debe especificar el Prima de seguro AFP.",
+        "En la columna -PENSION_AFP_COM- se debe especificar el Comisión AFP (flujo o mixta).",
+        "En la columna -PENSION_ONP_EMP- se debe especificar el Aporte a ONP del colaborador.",
+        "En la columna -INCOME_TAX_5TH- se debe especificar el Impuesto a la renta de quinta categoría.",
+        "En la columna -DCTO_RETENCION_JUDICIAL- se debe especificar el Descuento por retenciones judiciales.",
+        "En la columna -DCTO_EQUIPOS- se debe especificar el Descuento por equipos entregados.",
+        "En la columna -DCTO_PAY_FLOW- se debe especificar el Descuento asociados al programa PayFlow.",
+        "En la columna -DCTO_OFT- se debe especificar el Otros descuentos (misc).",
+        "En la columna -TOTAL_DESCUENTOS- se debe especificar el Suma total de descuentos realizados.",
+        "En la columna -ESSALUD_EMP- se debe especificar el Aporte del empleador a ESSALUD.",
+        "En la columna -EPS_PATRONAL- se debe especificar el Aporte patronal por EPS.",
+        "En la columna -TOTAL_APORTACIONES- se debe especificar el Suma total de aportes del empleador.",
+        "En la columna -TOTAL_NETO- se debe especificar el Total neto a pagar al colaborador.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/conceptos_periodo.xlsx",
+        generateEndpoint: "/api/bulk/conceptos-periodo/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_conceptos_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["CONTRATO", "PERIODO", "CODIGO_CONCEPTO", "MONTO"],
+      uploadEndpoint: "gestionvirtual/conceptsmassive", // <<<< NUEVO
+      helpUrl: "/ayuda/conceptos-periodo",
+    },
+
+    "conceptos-historico": {
+      title: "Conceptos por período",
+      subtitle: "Aplicación de conceptos por período a los empleados.",
+      instructions: [
+        "En la columna -TIPO_PERIODO- se debe especificar el tipo de periodo al que se hace referencia (NOMINA, GRATIFICACION, CTS).",
+        "En la columna -PERIODO_PROCESO- se debe especificar periodo al que se hace referencia (formato YYYYMM).",
+        "En la columna -NUMERO_DOCUMENTO- se debe especificar el Horas efectivamente trabajadas en el periodo.",
+        "En la columna -SUELDO_TEORICO- se debe especificar el Salario teórico calculado para el periodo antes de ajustes.",
+        "En la columna -DIAS_TRABAJADOS- se debe especificar el Número total de días efectivamente trabajados en el periodo.",
+        "En la columna -HRS_TRABAJADOS- se debe especificar el Horas efectivamente trabajadas en el periodo.",
+        "En la columna -DIAS_MEDICOS- se debe especificar el Días cubiertos por descanso médico (con o sin subsidio).",
+        "En la columna -DIAS_SUBIDIOS- se debe especificar el Días subsidiados por ESSALUD o entidad correspondiente.",
+        "En la columna -HRS_EXT_25- se debe especificar el Horas extras pagadas con recargo de 25%.",
+        "En la columna -HRS_EXT_35- se debe especificar el Horas extras pagadas con recargo de 35%.",
+        "En la columna -HRS_DIA_DESC- se debe especificar el Horas correspondientes a días de descanso trabajados.",
+        "En la columna -HRS_FERIADO- se debe especificar el Horas trabajadas durante días feriados.",
+        "En la columna -HRS_BONIF_NOCTURNAS- se debe especificar el Horas calificadas como nocturnas con bonificación.",
+        "En la columna -DIAS_LIC_SIN_GOCE- se debe especificar el Días de licencia sin goce de haber.",
+        "En la columna -DIAS_LIC_CON_GOCE- se debe especificar el Días de licencia con goce de haber.",
+        "En la columna -DIAS_FALTAS- se debe especificar el Días de ausencia injustificada.",
+        "En la columna -HORAS_TARDANZA- se debe especificar el Horas totales de tardanza en el periodo.",
+        "En la columna -DIAS_SUSPENSION- se debe especificar el Días de suspensión laboral.",
+        "En la columna -DIAS_VAC_A_DESCONT- se debe especificar el Días de vacaciones pendientes o para descontar.",
+        "En la columna -MINUTOS_TARDANZA- se debe especificar el Minutos totales de tardanza.",
+        "En la columna -BASIC_SALARY- se debe especificar el Salario básico correspondiente al colaborador.",
+        "En la columna -DESCANSO_MEDICO- se debe especificar el Monto pagado por descanso médico.",
+        "En la columna -FAMILY_ALLOWANCE- se debe especificar el Monto por asignación familiar.",
+        "En la columna -REINT_ASIG_FAMILIAR- se debe especificar el Reintegro de asignación familiar.",
+        "En la columna -BONIF_EXTRAORDINARIA_MANUAL- se debe especificar el Bonificación extraordinaria ingresada manualmente.",
+        "En la columna -OVERTIME_25- se debe especificar el Monto pagado por horas extra al 25%.",
+        "En la columna -OVERTIME_35- se debe especificar el Monto pagado por horas extra al 35%.",
+        "En la columna -OVERTIME_100- se debe especificar el Monto pagado por horas extra al 100%.",
+        "En la columna -OVERTIME_FERIADO- se debe especificar el Monto pagado por horas extra realizadas en feriados.",
+        "En la columna -PREST_ALIM- se debe especificar el Monto asignado por prestación de alimentación.",
+        "En la columna -ASIG_BONIF_EDUCA- se debe especificar el Asignación o bonificación por educación.",
+        "En la columna -BONO_PRODUCCION- se debe especificar el Bonificación por productividad.",
+        "En la columna -LIC_CON_GOCE_HABER- se debe especificar el Monto correspondiente a licencias con goce.",
+        "En la columna -LICENCIA_PATERNIDAD- se debe especificar el Monto por licencia de paternidad.",
+        "En la columna -SUBS_POR_ENFERMEDAD- se debe especificar el Subsidio por enfermedad reconocido por la entidad.",
+        "En la columna -DSCTO_FALTA- se debe especificar el Descuento aplicado por faltas injustificadas.",
+        "En la columna -DSCTO_SUSPENSION- se debe especificar el Descuento aplicado por días de suspensión.",
+        "En la columna -VACACIONES- se debe especificar el Monto correspondiente a vacaciones tomadas.",
+        "En la columna -MOV_SUP_ASISTENCIA- se debe especificar el Monto adicional por movilidad o asistencia.",
+        "En la columna -BONIF_POR_REFERIDO- se debe especificar el Bonificación por referido contratado.",
+        "En la columna -TOTAL_HABERES- se debe especificar el Suma total de haberes del periodo.",
+        "En la columna -PRESTAMO- se debe especificar el Descuento por préstamos del empleador.",
+        "En la columna -DCTO_EPS- se debe especificar el Descuento por EPS asumido por el colaborador.",
+        "En la columna -DCTO_VIATICOS- se debe especificar el Descuento por viáticos pendientes de regularización.",
+        "En la columna -DTO_SEG_ONCOLOGICO- se debe especificar el Descuento por seguro oncológico.",
+        "En la columna -DCTO_CELULAR- se debe especificar el Descuento relacionado al uso de celular corporativo.",
+        "En la columna -DESC_PREST_ALIM- se debe especificar el Descuento de prestación de alimentos.",
+        "En la columna -DCTO_VEHICULAR- se debe especificar el Descuento por vehículo o asignaciones vehiculares.",
+        "En la columna -DCTO_FOTOCHECK- se debe especificar el Descuento por fotocheck o credencial.",
+        "En la columna -PENSION_AFP_APO- se debe especificar el Aporte obligatorio AFP del colaborador.",
+        "En la columna -PENSION_AFP_SEG- se debe especificar el Prima de seguro AFP.",
+        "En la columna -PENSION_AFP_COM- se debe especificar el Comisión AFP (flujo o mixta).",
+        "En la columna -PENSION_ONP_EMP- se debe especificar el Aporte a ONP del colaborador.",
+        "En la columna -INCOME_TAX_5TH- se debe especificar el Impuesto a la renta de quinta categoría.",
+        "En la columna -DCTO_RETENCION_JUDICIAL- se debe especificar el Descuento por retenciones judiciales.",
+        "En la columna -DCTO_EQUIPOS- se debe especificar el Descuento por equipos entregados.",
+        "En la columna -DCTO_PAY_FLOW- se debe especificar el Descuento asociados al programa PayFlow.",
+        "En la columna -DCTO_OFT- se debe especificar el Otros descuentos (misc).",
+        "En la columna -TOTAL_DESCUENTOS- se debe especificar el Suma total de descuentos realizados.",
+        "En la columna -ESSALUD_EMP- se debe especificar el Aporte del empleador a ESSALUD.",
+        "En la columna -EPS_PATRONAL- se debe especificar el Aporte patronal por EPS.",
+        "En la columna -TOTAL_APORTACIONES- se debe especificar el Suma total de aportes del empleador.",
+        "En la columna -TOTAL_NETO- se debe especificar el Total neto a pagar al colaborador.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/conceptos_historicos.xlsx",
+        generateEndpoint: "/api/bulk/conceptos-periodo/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_conceptos_hist_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["CONTRATO", "PERIODO", "CODIGO_CONCEPTO", "MONTO"],
+      //uploadEndpoint: 'nomina/period_massive_create',     // <<<< NUEVO
+      //uploadEndpoint: 'nomina/period_directory_massive_create',
+      uploadEndpoint: "gestionvirtual/conceptsmassive_historicos",
+      helpUrl: "/ayuda/conceptos-periodo",
+    },
+
+    "centros-costo": {
+      title: "Centros de costo",
+      subtitle: "Sube la estructura de centros de costo de los empleados.",
+      instructions: [
+        "En la columna -codigo_interno- se debe especificar el Código interno único que identifica el Centro de costo.",
+        "En la columna -nombre- se debe especificar el Nombre oficial del Centro de costo.",
+        "En la columna -descripcion- se debe especificar una Descripción breve del Centro de costo.",
+        "En la columna -empresa- se debe especificar el Identificador de la empresa a la que pertenece el Centro de costo.",
+        "En la columna -centro_costo_padre- se debe especificar el identificador del la estructura organizacional padre al Centro de costo.",
+        "En la columna -estatus- se debe especificar si el registro está activo o inactivo.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/centros_costo.xlsx",
+        generateEndpoint: "/api/bulk/centros-costo/template",
+        lastUpdated: "Actualizado el 05/09/2025 – 02:02 PM",
+      },
+      excelUrl: "compben/generate_centroscostos_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["nombre", "descripcion"],
+      uploadEndpoint: "gestionvirtual/costcenters_massive",
+      helpUrl: "/ayuda/centros-costo",
+    },
+
+    directorio_update: {
+      title: "Actualizar Relación Laboral (Directorio)",
+      subtitle:
+        "Carga masiva de la lista de personas que se relacionan con tu organización.",
+      instructions: [
+        "En la columna -numero_documento- se debe especificar el número de documento de identidad del empleado.",
+        "En la columna -codigo_contrato- se debe especificar el código único del contrato.",
+        "En la columna -estado- se debe indicar si el empleado está activo o inactivo.",
+        "En la columna -fecha_ingreso_primera- se debe especificar la fecha del primer ingreso del empleado.",
+        "En la columna -fecha_inicio- se debe especificar la fecha de inicio del contrato actual.",
+        "En la columna -fecha_fin- se debe especificar la fecha de finalización del contrato actual.",
+        "En la columna -fecha_cese- se debe especificar la fecha en la que se produjo el cese laboral (si aplica).",
+        "En la columna -sueldo_base- se debe ingresar el sueldo base mensual del empleado.",
+        "En la columna -periodo_prueba- se debe indicar el periodo de prueba establecido en el contrato.",
+        "En la columna -tiene_movilidad- se debe indicar si el empleado recibe movilidad (1 = sí, 0 = no).",
+        "En la columna -monto_movilidad- se debe indicar el monto asignado por movilidad.",
+        "En la columna -tiene_tarjeta_alimentos- se debe indicar si el empleado recibe tarjeta de alimentos (1 = sí, 0 = no).",
+        "En la columna -monto_tarjeta_alimentos- se debe registrar el monto mensual de la tarjeta de alimentos.",
+        "En la columna -tiene_eps- se debe indicar si el empleado cuenta con un seguro EPS (1 = sí, 0 = no).",
+        "En la columna -tiene_oncologico- se debe indicar si el empleado tiene seguro oncológico (1 = sí, 0 = no).",
+        "En la columna -id_tipo_documento- se debe ingresar el identificador del tipo de documento usado por el empleado.",
+        "En la columna -primer_nombre- se debe especificar el primer nombre del empleado.",
+        "En la columna -segundo_nombre- se debe especificar el segundo nombre del empleado (si existe).",
+        "En la columna -apellido_paterno- se debe registrar el apellido paterno del empleado.",
+        "En la columna -apellido_materno- se debe registrar el apellido materno del empleado.",
+        "En la columna -email_personal- se debe ingresar el correo personal del empleado.",
+        "En la columna -telefono- se debe registrar el número telefónico del empleado.",
+        "En la columna -fecha_nacimiento- se debe especificar la fecha de nacimiento del empleado.",
+        "En la columna -nacionalidad- se debe indicar la nacionalidad del empleado.",
+        "En la columna -id_estado_civil- se debe ingresar el identificador del estado civil.",
+        "En la columna -estado_civil- se debe registrar el estado civil del empleado.",
+        "En la columna -genero- se debe especificar el género del empleado.",
+        "En la columna -idioma- se debe especificar el idioma principal del empleado.",
+        "En la columna -direccion- se debe registrar la dirección del domicilio.",
+        "En la columna -pais- se debe indicar el país de residencia.",
+        "En la columna -departamento- se debe registrar el departamento del domicilio.",
+        "En la columna -provincia- se debe registrar la provincia correspondiente.",
+        "En la columna -distrito- se debe registrar el distrito correspondiente.",
+        "En la columna -id_tipo_calle- se debe ingresar el tipo de vía (calle, avenida, jirón, etc.).",
+        "En la columna -nombre_calle- se debe especificar el nombre de la calle.",
+        "En la columna -numero_calle- se debe registrar el número de la vivienda.",
+        "En la columna -id_tipo_zona- se debe especificar el tipo de zona (urbana, rural, etc.).",
+        "En la columna -nombre_zona- se debe registrar el nombre de la zona.",
+        "En la columna -referencia- se debe ingresar una referencia adicional del domicilio.",
+        "En la columna -id_ocupacion- se debe registrar el identificador de la ocupación.",
+        "En la columna -id_puesto- se debe registrar el identificador del puesto.",
+        "En la columna -id_area- se debe registrar el identificador del área.",
+        "En la columna -email_corporativo- se debe ingresar el correo corporativo del empleado.",
+        "En la columna -cci- se debe registrar el código de cuenta interbancaria del empleado.",
+        "En la columna -id_banco- se debe especificar el identificador del banco.",
+        "En la columna -banco- se debe indicar el nombre del banco.",
+        "En la columna -tiene_hijos- se debe indicar si el empleado tiene hijos registrados (1 = sí, 0 = no).",
+        "En la columna -id_sistema_pension- se debe ingresar el sistema de pensiones al que pertenece el empleado.",
+        "En la columna -sistema_pension- se debe especificar el nombre del sistema de pensiones.",
+        "En la columna -modalidad_comision- se debe indicar la modalidad de comisión aplicable.",
+        "En la columna -cuspp- se debe registrar el código único de afiliación previsional.",
+        "En la columna -fecha_afiliacion_pension- se debe especificar la fecha de afiliación al sistema de pensiones.",
+        "En la columna -tipo_contrato- se debe indicar el tipo de contrato del empleado.",
+        "En la columna -id_empresa- se debe ingresar el identificador de la empresa.",
+        "En la columna -moneda- se debe indicar la moneda aplicable.",
+        "En la columna -aportes_empleador- se debe registrar los aportes del empleador.",
+        "En la columna -codigo_sede- se debe registrar el código de la sede.",
+        "En la columna -nombre_sede- se debe registrar el nombre de la sede.",
+        "En la columna -codigo_departamento- se debe indicar el código del departamento organizacional.",
+        "En la columna -nombre_departamento- se debe indicar el nombre del departamento.",
+        "En la columna -id_departamento- se debe registrar el identificador del departamento.",
+        "En la columna -codigo_area- se debe especificar el código del área.",
+        "En la columna -nombre_area- se debe registrar el nombre del área.",
+        "En la columna -codigo_seccion- se debe especificar el código de la sección.",
+        "En la columna -nombre_seccion- se debe registrar el nombre de la sección.",
+        "En la columna -codigo_centro_costo- se debe ingresar el código del centro de costos.",
+        "En la columna -nombre_centro_costo- se debe ingresar el nombre del centro de costos.",
+        "En la columna -codigo_puesto- se debe registrar el código del puesto.",
+        "En la columna -nombre_puesto- se debe registrar el nombre del puesto.",
+        "En la columna -codigo_unidad- se debe registrar el código de la unidad.",
+        "En la columna -nombre_unidad- se debe registrar el nombre de la unidad.",
+        "En la columna -codigo_ocupacion- se debe registrar el código de la ocupación.",
+        "En la columna -nombre_ocupacion- se debe registrar el nombre de la ocupación.",
+        "En la columna -id_motivo_cese- se debe indicar el motivo de cese.",
+        "En la columna -motivo_cese- se debe especificar la descripción del motivo de cese.",
+        "En la columna -activo- se debe indicar si el registro se encuentra activo.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/directorio.xlsx",
+        generateEndpoint: "/api/bulk/directorio/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generatedirectory_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/update_directory",
+      helpUrl: "/ayuda/directorio_update",
+    },
+
+    retenciones: {
+      title: "Retenciones Judiciales",
+      subtitle: "Carga masiva de las retenciones judiciales de trabajadores.",
+      instructions: [
+        "En la columna -documento_colaborador- se debe especificar el trabajador al que se le aplica la retención judicial.",
+        "En la columna -codigo_judicial- se debe especificar el código asignado por el sistema judicial al caso.",
+        "En la columna -numero_resolucion- se debe especificar el número de resolución legal que ordena la retención.",
+        "En la columna -url_pdf- se debe especificar el enlace al documento PDF de la resolución o expediente.",
+        "En la columna -tipo_calculo- se debe especificar el indica si la retención es un porcentaje o un monto fijo.",
+        "En la columna -monto- se debe especificar el monto o porcentaje que debe retenerse.",
+        "En la columna -fecha_inicio- se debe especificar la fecha en la que comienza la retención judicial.",
+        "En la columna -fecha_fin- se debe especificar la fecha en la que finaliza la retención judicial (si aplica).",
+        "En la columna -observaciones- se debe especificar comentarios u observaciones adicionales.",
+        "En la columna -nombre_beneficiario- se debe especificar el nombre de la persona que recibirá la retención.",
+        "En la columna -documento_beneficiario- se debe especificar el número de documento del beneficiario.",
+        "En la columna -tipo_documento_beneficiario- se debe especificar el tipo de documento del beneficiario (DNI, CE, pasaporte, etc.).",
+        "En la columna -cuenta_beneficiario- se debe especificar la cuenta bancaria del beneficiario (si corresponde).",
+        "En la columna -documento_adjuntado- se debe especificarla ruta o referencia del documento adjunto adicional.",
+        "En la columna -estado- se debe especificar el estado de la retención judicial (activa/inactiva).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/retenciones.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_retentions_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/retentions_massive",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    prestamos: {
+      title: "Cuentas Corrientes",
+      subtitle:
+        "Carga masiva del registro de Cuentas Corrientes a colaboradores.",
+      instructions: [
+        "En la columna -documento_colaborador- se debe especificar el trabajador al que se le aplica el préstamo.",
+        "En la columna -codigo_prestamo- se debe especificar un código identificador del préstamo.",
+        "En la columna -tipo_prestamo- se debe especificar el tipo de préstamo (Ordinario o extraordinario).",
+        "En la columna -motivo_prestamo- se debe especificar el motivo del préstamo.",
+        "En la columna -fecha_solicitud- se debe especificar la fecha de solicitud.",
+        "En la columna -codigo_moneda- se debe especificar el tipo de moneda del préstamo (PEN o USD).",
+        "En la columna -monto_solicitado- se debe especificar el importe total solicitado por el trabajador.",
+        "En la columna -cantidad_cuotas- se debe especificar la cantidad de cuotas en el cronograma.",
+        "En la columna -tasa_anual- se debe especificar la tasa anual acordada.",
+        "En la columna -factor_ajuste- se debe especificar el factor matemático usado para ajustar cálculos de amortización, intereses u otros parámetros.",
+        "En la columna -total_intereses- se debe especificar la suma total de intereses generados durante toda la vigencia del préstamo.",
+        "En la columna -total_igv- se debe especificar la suma total de intereses generados durante toda la vigencia del préstamo.",
+        "En la columna -monto_total- se debe especificar el monto final del préstamo incluyendo capital, intereses e IGV.",
+        "En la columna -cuota_mensual- se debe especificar el importe fijo o calculado que se descontará mensualmente.",
+        "En la columna -dia_pago- se debe especificar.",
+        "En la columna -fecha_inicio_descuento- se debe especificar la fecha en la que se realizará el primer descuento del préstamo.",
+        "En la columna -fecha_vencimiento- se debe especificar la fecha final en la que se termina de pagar la última cuota del préstamo.",
+        "En la columna -flags_descuento- se debe especificar la etiquetas de descuento del préstamo acordadas (Mensual, Diciembre, etc).",
+        "En la columna -documento_sustento- se debe especificar el enlace al archivo o referencia al documento que respalda el préstamo (resolución, carta, PDF, etc.).",
+        "En la columna -estado- se debe especificar el estado actual del préstamo: pendiente, aprobado, pagado, anulado, en proceso, etc.",
+        "En la columna -es_activo- se debe especificar si el préstamo sigue activo (1) o ya no está vigente (0).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/cuentas_corrientes.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generateloans_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/loans_massive",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    "cronograma-prestamos": {
+      title: "Préstamos",
+      subtitle:
+        "Carga masiva del registro de Cuentas Corrientes a colaboradores.",
+      instructions: [
+        "En la columna -Código del préstamo- se debe especificar el código del préstamo registrado.",
+        "En la columna -Número de cuota- se debe especificar el número secuencial de la cuota dentro del cronograma del préstamo.",
+        "En la columna -Mes- se debe especificar elNombre del mes al que corresponde la cuota.",
+        "En la columna -Año- se debe especificar el año calendario al que corresponde la cuota.",
+        "En la columna -Fecha de vencimiento- se debe especificar la fecha límite en la que debe pagarse la cuota.",
+        "En la columna -Saldo inicial- se debe especificar el saldo del préstamo antes de aplicar el pago de la cuota.,",
+        "En la columna -Amortización- se debe especificar el monto del capital que se paga en esta cuota.",
+        "En la columna -Amortización extra- se debe especificar el pago adicional al capital fuera de la amortización regular.",
+        "En la columna -Intereses- se debe especificar el monto correspondiente a intereses generados en la cuota.",
+        "En la columna -IGV- se debe especificar el impuesto General a las Ventas aplicado a los intereses.",
+        "En la columna -Valor de la cuota- se debe especificar el monto total a pagar en la cuota, incluyendo capital, intereses e impuestos.",
+        "En la columna -Saldo final- se debe especificar el saldo del préstamo después de aplicar el pago de la cuota.",
+        "En la columna -Estado de la cuota- se debe especificar el estado actual de la cuota: pendiente, descontada o cancelada.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/cuentas_corrientes.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_prestamos_cronogramas_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/loan_schedule_massive",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    "liquidacion-conceptos": {
+      title: "liquidacion-conceptos",
+      subtitle: "Carga masiva del registro de préstamos a colaboradores.",
+      instructions: [
+        "En la columna -TIPO_PERIODO- se debe especificar el tipo de periodo (NÓMINA, LIQUIDACIÓN, etc).",
+        "En la columna -PERIODO_PROCESO- se debe indicar el periodo específico que se está procesando.",
+        "En la columna -NUMERO_DOCUMENTO- se debe consignar el número de documento del trabajador.",
+        "En la columna -SUELDO_TEORICO- se debe registrar el sueldo base teórico asignado al trabajador.",
+        "En la columna -DIAS_TRABAJADOS- se deben reportar los días efectivamente trabajados.",
+        "En la columna -HRS_TRABAJADOS- se deben registrar las horas efectivamente trabajadas.",
+        "En la columna -DIAS_MEDICOS- se deben indicar los días con descanso médico.",
+        "En la columna -DIAS_SUBIDIOS- se deben consignar los días subsidiados por las entidades correspondientes.",
+        "En la columna -HRS_EXT_25- se deben registrar las horas extras pagadas al 25%.",
+        "En la columna -HRS_EXT_35- se deben registrar las horas extras pagadas al 35%.",
+        "En la columna -HRS_DIA_DESC- se deben indicar las horas trabajadas en días de descanso.",
+        "En la columna -HRS_FERIADO- se deben registrar las horas trabajadas durante feriados.",
+        "En la columna -HRS_BONIF_NOCTURNAS- se deben consignar las horas con bonificación nocturna.",
+        "En la columna -DIAS_LIC_SIN_GOCE- se deben indicar los días de licencia sin goce de haber.",
+        "En la columna -DIAS_LIC_CON_GOCE- se deben indicar los días de licencia con goce de haber.",
+        "En la columna -DIAS_FALTAS- se deben registrar los días de inasistencia.",
+        "En la columna -HORAS_TARDANZA- se deben consignar las horas de tardanza.",
+        "En la columna -DIAS_SUSPENSION- se deben indicar los días de suspensión laboral.",
+        "En la columna -DIAS_VAC_A_DESCONT- se deben registrar los días de vacaciones a descontar.",
+        "En la columna -MINUTOS_TARDANZA- se deben consignar los minutos de tardanza acumulados.",
+        "En la columna -BASIC_SALARY- se debe registrar el salario básico del trabajador.",
+        "En la columna -FAMILY_ALLOWANCE- se debe indicar la asignación familiar correspondiente.",
+        "En la columna -LIQ_GRAT_TRUNCA- se debe consignar la gratificación trunca.",
+        "En la columna -LIQ_CTS_TRUNCA- se debe consignar la CTS trunca.",
+        "En la columna -LIQ_I_VACACIONES- se debe indicar la indemnización por vacaciones no gozadas.",
+        "En la columna -LIQ_VAC_TRUNCA- se debe registrar la vacación trunca.",
+        "En la columna -LIQ_I_DEVOLUCION_RENTA- se debe consignar la devolución de renta correspondiente.",
+        "En la columna -LIQ_BONIF_EXTRAORD_TRUNCA- se debe registrar la bonificación extraordinaria trunca.",
+        "En la columna -LBS_TOTAL_INGRESOS- se debe indicar el total de ingresos liquidados.",
+        "En la columna -LIQ_D_AFP_COMISION_VARIA- se debe registrar la comisión variable de AFP.",
+        "En la columna -LIQ_D_DCTO_HERRAMIENTA- se debe consignar el descuento por herramientas.",
+        "En la columna -LIQ_D_DCTO_DE_EPP- se debe registrar el descuento por EPP.",
+        "En la columna -LIQ_D_DSCTO_PAY_FLOW- se debe consignar el descuento por pay flow.",
+        "En la columna -LIQ_D_AFP_SEGURO_INVALIDEZ- se debe registrar el seguro de invalidez de AFP.",
+        "En la columna -LIQ_D_S_N_P- se debe indicar el aporte a la ONP.",
+        "En la columna -LIQ_D_AFP_FONDO_PENSIONES- se debe registrar el aporte al fondo de pensiones AFP.",
+        "En la columna -EPS_PATRONAL_LIQUIDACION- se debe indicar el aporte patronal a EPS.",
+        "En la columna -ESSALUD_EMP_LIQUIDACION- se debe consignar el aporte a Essalud por parte del empleador.",
+        "En la columna -LBS_TOTAL_APORTES- se debe registrar el total de aportes generados.",
+        "En la columna -LIQ_NETO_PAGAR- se debe indicar el monto neto a pagar al trabajador.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/retenciones.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_liquidaciones_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/conceptsmassive_historicos_liquidaciones",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    bonos: {
+      title: "Bonos",
+      subtitle: "Carga masiva del registro de bonos a colaboradores.",
+      instructions: [
+        "En la columna -TIPO_PERIODO- se debe especificar el tipo de periodo (NOMINA, LIQUIDACION, ETC).",
+        "En la columna -PERIODO_PROCESO- se debe especificar el periodo.",
+        "En la columna -NUMERO_DOCUMENTO- se debe especificar el número de documento del colaborador.",
+        "En la columna -CONCEPTO- se debe especificar el bono que se quiere asignar al colaborador.",
+        "En la columna -MONTO_SOLES- se debe especificar el monto en soles a asignar.",
+        "En la columna -MONTO_DOLARES- se debe especificar el monto en dolares a asignar.",
+        "En la columna -IMPORTE_TOTAL- se debe especificar el importe total a asignar, incluyendo los montos anteriores.",
+        "En la columna -ESTATUS_SOLICITUD- se debe especificar el estatus de solicitud (POR PAGAR, PAGADO).",
+        "En la columna -TIPO_CAMPO- se debe especificar el tipo del cambio del día.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/retenciones.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_bonos_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/bonosmassive",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    holidays: {
+      title: "Vacaciones Consolidadas",
+      subtitle: "Carga masiva del registro de vacaciones consolidadas.",
+      instructions: [
+        "En la columna -name- se debe especificar el nombre completo del colaborador.",
+        "En la columna -- se debe especificar el DNI del colaborador.",
+        "En la columna -**fecha**- se debe especificar si es vacaciones o feriado (VC,VA o FE).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/vacaciones_consolidadas.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "tempo/generate_vacation_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "tempo/consolidatedholidays",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    plame: {
+      title: "Codigos PLAME",
+      subtitle: "Carga masiva de códigos PLAME a los conceptos de la empresa.",
+      instructions: [
+        "En la columna -CODIGO CONCEPTO- se debe especificar el código identificador del Concepto.",
+        "En la columna -CODIGO PLAME- se debe especificar el código PLAME a imputar.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/codigos_plame.xlsx",
+        generateEndpoint: "/api/bulk/retenciones/template",
+        lastUpdated: "Actualizado el 09/10/2025 – 05:22 PM",
+      },
+      excelUrl: "compben/generate_plame_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [],
+      uploadEndpoint: "gestionvirtual/plame_massive",
+      helpUrl: "/ayuda/directorio",
+    },
+
+    estructura_organizacional: {
+      title: "Estructura Organizacional",
+      subtitle: "Carga masiva de la estructura organizacional de la empresa.",
+      instructions: [
+        "En la columna -codigo_interno- se debe especificar el código interno único de la unidad organizacional.",
+        "En la columna -nombre- se debe especificar el nombre de la unidad organizacional.",
+        "En la columna -descripcion- se debe especificar la descripción de la unidad organizacional.",
+        "En la columna -codigo_interno_categoria- se debe especificar el código interno de la categoría de la unidad.",
+        "En la columna -codigo_interno_nodo_padre- se debe especificar el código interno de la unidad padre (si aplica).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/estructura_organizacional.xlsx",
+        generateEndpoint: "/api/bulk/estructura_organizacional/template",
+        lastUpdated: "Actualizado el 02/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_org_structure_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo_interno", "nombre"],
+      uploadEndpoint: "gestionvirtual/structure_massive",
+      helpUrl: "/ayuda/estructura-organizacional",
+    },
+
+    familias: {
+      title: "Familias de Puestos",
+      subtitle: "Carga masiva de familias de puestos de la organización.",
+      instructions: [
+        "En la columna -codigo_interno- se debe especificar el código único de la familia.",
+        "En la columna -nombre- se debe especificar el nombre de la familia de puestos.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/familias.xlsx",
+        generateEndpoint: "/api/bulk/familias/template",
+        lastUpdated: "Actualizado el 02/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_job_families_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo", "nombre"],
+      uploadEndpoint: "gestionvirtual/family_massive",
+      helpUrl: "/ayuda/familias",
+    },
+
+    puestos: {
+      title: "Puestos",
+      subtitle: "Carga masiva de puestos de la organización.",
+      instructions: [
+        "Las primeras 4 columnas son obligatorias: codigo_interno, nombre, codigo_interno_familia, codigo_interno_cargo.",
+        "En la columna -codigo_interno- se debe especificar el código único del puesto (ej: P-000123). [OBLIGATORIO]",
+        "En la columna -nombre- se debe especificar el nombre del puesto (ej: Jefe prueba). [OBLIGATORIO]",
+        "En la columna -codigo_interno_familia- se debe especificar el código interno de la familia a la que pertenece (ej: F-01). [OBLIGATORIO]",
+        "En la columna -codigo_interno_cargo- se debe especificar el código interno del cargo (ej: C-003). [OBLIGATORIO]",
+        "En la columna -grado- se debe especificar el grado del puesto (ej: 4).",
+        "En la columna -nivel- se debe especificar el nivel del puesto (ej: 13).",
+        "En la columna -subnivel- se debe especificar el subnivel del puesto (ej: 312).",
+        "En la columna -categoria- se debe especificar la categoría del puesto (ej: 34).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/plantilla_puestos.xlsx",
+        generateEndpoint: "/api/bulk/puestos/template",
+        lastUpdated: "Actualizado el 10/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_jobs_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [
+        "codigo_interno",
+        "nombre",
+        "codigo_interno_familia",
+        "codigo_interno_cargo",
+      ],
+      uploadEndpoint: "gestionvirtual/job_massive",
+      helpUrl: "/ayuda/puestos",
+    },
+
+    posiciones: {
+      title: "Posiciones",
+      subtitle: "Carga masiva de posiciones de la organización.",
+      instructions: [
+        "Las primeras 4 columnas son obligatorias: codigo_interno, nombre, codigo_interno_puesto, codigo_interno_estructura.",
+        "En la columna -codigo_interno- se debe especificar el código único de la posición (ej: 12412121). [OBLIGATORIO]",
+        "En la columna -nombre- se debe especificar el nombre de la persona (ej: Jeremias). [OBLIGATORIO]",
+        "En la columna -codigo_interno_puesto- se debe especificar el código interno del puesto asociado (ej: P-000123). [OBLIGATORIO]",
+        "En la columna -codigo_interno_estructura- se debe especificar el código interno de la estructura organizacional (ej: 23). [OBLIGATORIO]",
+        "En la columna -codigo_interno_posicion_jefe- se debe especificar el código interno de la posición del jefe directo (ej: 34).",
+        "En la columna -headcount- se debe especificar el headcount de la posición (ej: 1).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/posiciones.xlsx",
+        generateEndpoint: "/api/bulk/posiciones/template",
+        lastUpdated: "Actualizado el 10/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_positions_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: [
+        "codigo_interno",
+        "nombre",
+        "codigo_interno_puesto",
+        "codigo_interno_estructura",
+      ],
+      uploadEndpoint: "gestionvirtual/positions_massive",
+      helpUrl: "/ayuda/posiciones",
+    },
+
+    cargos: {
+      title: "Cargos",
+      subtitle: "Carga masiva de cargos de la organización.",
+      instructions: [
+        "En la columna -codigo_interno- se debe especificar el código único del cargo.",
+        "En la columna -nombre- se debe especificar el nombre del cargo.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/cargos.xlsx",
+        generateEndpoint: "/api/bulk/cargos/template",
+        lastUpdated: "Actualizado el 02/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_job_group_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo", "nombre"],
+      uploadEndpoint: "nomina/job_group_massive",
+      helpUrl: "/ayuda/cargos",
+    },
+
+    bandas_salariales: {
+      title: "Bandas Salariales",
+      subtitle: "Carga masiva de bandas salariales.",
+      instructions: [
+        "Las primeras 6 columnas son obligatorias: codigo_interno_familia, grado, codigo_categoria, moneda, mid, min.",
+        "En la columna -codigo_interno_familia- se debe especificar el código interno de la familia (ej: F-02). [OBLIGATORIO]",
+        "En la columna -grado- se debe especificar el grado (ej: ada). [OBLIGATORIO]",
+        "En la columna -codigo_categoria- se debe especificar el código de la categoría (ej: 2). [OBLIGATORIO]",
+        "En la columna -moneda- se debe especificar la moneda (ej: 231 o PEN). [OBLIGATORIO]",
+        "En la columna -mid- se debe especificar el valor medio de la banda (ej: 2000). [OBLIGATORIO]",
+        "En la columna -min- se debe especificar el valor mínimo de la banda (ej: 1000). [OBLIGATORIO]",
+        "En la columna -max- se debe especificar el valor máximo de la banda (ej: 5000).",
+      ],
+      template: {
+        downloadUrl: "/static/templates/bandas_salariales.xlsx",
+        generateEndpoint: "/api/bulk/bandas_salariales/template",
+        lastUpdated: "Actualizado el 10/02/2026 – 10:00 AM",
+      },
+      excelUrl: "compben/generate_salary_band_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo_interno_familia", "grado", "codigo_categoria", "moneda", "mid", "min"],
+      uploadEndpoint: "gestionvirtual/salary_band_massive",
+      helpUrl: "/ayuda/bandas-salariales",
+    },
+
+    // ==================== TEST CARGAS MASIVAS ====================
+    test_contratos: {
+      title: "TEST - Carga de Contratos",
+      subtitle: "Sección de pruebas para carga masiva de contratos.",
+      category: "test",
+      instructions: [
+        "Esta es una sección de pruebas para validar la carga de contratos.",
+        "En la columna -numero_documento- se debe especificar el número de documento del empleado.",
+        "En la columna -codigo_contrato- se debe especificar el código único del contrato.",
+        "En la columna -fecha_inicio- se debe especificar la fecha de inicio del contrato.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/test_contratos.xlsx",
+        generateEndpoint: "/api/bulk/test/contratos/template",
+        lastUpdated: "Actualizado el 25/02/2026 – TEST",
+      },
+      excelUrl: "compben/test_generate_contracts_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["numero_documento", "codigo_contrato"],
+      uploadEndpoint: "gestionvirtual/test_contratos_massive",
+      helpUrl: "/ayuda/test/contratos",
+    },
+    test_personas: {
+      title: "TEST - Carga de Personas",
+      subtitle: "Sección de pruebas para carga masiva de personas.",
+      category: "test",
+      instructions: [
+        "Esta es una sección de pruebas para validar la carga de personas.",
+        "En la columna -numero_documento- se debe especificar el número de documento de identidad.",
+        "En la columna -primer_nombre- se debe especificar el primer nombre.",
+        "En la columna -apellido_paterno- se debe especificar el apellido paterno.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/test_personas.xlsx",
+        generateEndpoint: "/api/bulk/test/personas/template",
+        lastUpdated: "Actualizado el 25/02/2026 – TEST",
+      },
+      excelUrl: "compben/test_generate_persons_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["numero_documento"],
+      uploadEndpoint: "gestionvirtual/test_persons_massive",
+      helpUrl: "/ayuda/test/personas",
+    },
+    test_posiciones: {
+      title: "TEST - Carga de Posiciones",
+      subtitle: "Sección de pruebas para carga masiva de posiciones/puestos.",
+      category: "test",
+      instructions: [
+        "Esta es una sección de pruebas para validar la carga de posiciones.",
+        "En la columna -codigo_interno- se debe especificar el código único de la posición.",
+        "En la columna -nombre- se debe especificar el nombre del puesto.",
+        "En la columna -descripcion- se debe especificar la descripción del puesto.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/test_posiciones.xlsx",
+        generateEndpoint: "/api/bulk/test/posiciones/template",
+        lastUpdated: "Actualizado el 25/02/2026 – TEST",
+      },
+      excelUrl: "compben/test_generate_positions_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["codigo_interno", "nombre"],
+      uploadEndpoint: "gestionvirtual/test_positions_massive",
+      helpUrl: "/ayuda/test/posiciones",
+    },
+    
+    test_personas_test: {
+      title: "TEST - Carga de Personas -  TEST",
+      subtitle: "Sección de pruebas para carga masiva de personas.",
+      category: "test",
+      instructions: [
+        "Esta es una sección de pruebas para validar la carga de personas.",
+        "En la columna -numero_documento- se debe especificar el número de documento de identidad.",
+        "En la columna -primer_nombre- se debe especificar el primer nombre.",
+        "En la columna -apellido_paterno- se debe especificar el apellido paterno.",
+      ],
+      template: {
+        downloadUrl: "/static/templates/test_personas.xlsx",
+        generateEndpoint: "/api/bulk/test/personas/template",
+        lastUpdated: "Actualizado el 25/02/2026 – TEST",
+      },
+      excelUrl: "compben/test_generate_persons_excel",
+      accept: ".xlsx,.xls,.csv",
+      maxSizeMB: 10,
+      requiredHeaders: ["numero_documento"],
+      uploadEndpoint: "gestionvirtual/persons_massivetest",
+      helpUrl: "/ayuda/test/personas",
+    },
+  };
+
+  /* ============== Estado/refs UI ============== */
+  const modalEl = document.getElementById("modalBulk");
+  const modal = new bootstrap.Modal(modalEl);
+  const ui = {
+    title: document.getElementById("bulkModalTitle"),
+    subtitle: document.getElementById("bulkModalSubtitle"),
+    instructions: document.getElementById("bulkModalInstructions"),
+    dzForm: document.getElementById("bulkDropzone"),
+    statusWrap: document.getElementById("bulkStatus"),
+    fileName: document.getElementById("bulkFileName"),
+    validation: document.getElementById("bulkValidation"),
+    generateLink: document.getElementById("bulkGenerateTpl"),
+    downloadLink: document.getElementById("bulkDownloadTpl"),
+    helpLink: document.getElementById("bulkHelp"),
+    lastUpdated: document.getElementById("bulkLastUpdated"),
+    uploadBtn: document.getElementById("bulkUploadBtn"),
+  };
+  let currentKey = null;
+  let currentCfg = null;
+  let dz = null;
+
+  Dropzone.autoDiscover = false;
+
+  /* ==============================
+  Helpers
+  ============================== */
+  function resetModal() {
+    ui.statusWrap.classList.add("d-none");
+    ui.fileName.textContent = "—";
+    ui.validation.textContent = "";
+    ui.uploadBtn.disabled = true;
+    ui.uploadBtn.innerHTML =
+      '<i class="bi bi-upload me-2"></i>Subir y procesar';
+    if (dz) dz.removeAllFiles(true);
+  }
+
+  function renderModal(cfg) {
+    ui.title.textContent = cfg.title;
+    ui.subtitle.textContent = cfg.subtitle;
+    ui.instructions.innerHTML = cfg.instructions
+      .map((x) => `<li>${x}</li>`)
+      .join("");
+    ui.downloadLink.href = cfg.template.downloadUrl;
+    ui.helpLink.href = cfg.helpUrl || "#";
+    ui.lastUpdated.textContent = cfg.template.lastUpdated || "";
+
+    resetModal();
+
+    // (Re)crear Dropzone solo para drag&drop
+    if (dz) {
+      dz.destroy();
+      dz = null;
+    }
+    dz = new Dropzone(ui.dzForm, {
+      url: "#", // no se usa, bloqueamos envío automático
+      autoProcessQueue: false,
+      maxFiles: 1,
+      acceptedFiles: cfg.accept,
+      addRemoveLinks: true,
+      dictDefaultMessage:
+        "Arrastra tu archivo aquí o haz clic para seleccionarlo",
+      init: function () {
+        this.on("addedfile", (file) => {
+          if (this.files[1]) this.removeFile(this.files[0]); // forzar solo un archivo
+          ui.statusWrap.classList.remove("d-none");
+          ui.fileName.textContent = file.name;
+          ui.validation.innerHTML = "Archivo listo para subir.";
+          ui.uploadBtn.disabled = false;
+
+          // Botón "Subir y procesar" (versión base64 + callAPI)
+          ui.uploadBtn.onclick = () => {
+            if (!dz || dz.files.length === 0) {
+              ui.validation.innerHTML = `<span class="text-danger">No se ha seleccionado ningún archivo</span>`;
+              return;
+            }
+
+            const file = dz.files[0];
+
+            ui.uploadBtn.disabled = true;
+            ui.uploadBtn.innerHTML =
+              '<span class="spinner-border spinner-border-sm me-2"></span> Procesando…';
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const base64 = e.target.result; // data:...;base64,XXXX
+
+              callAPI({
+                method: currentCfg.uploadEndpoint, // <<<< usar la URL desde BULK_CONFIG
+                //base: "",
+                params: {
+                  file: base64,
+                },
+                post: true,
+                ok: (response) => {
+                  if (response?.status) {
+                    // Cerrar modal
+                    /*
+                    const modalEl = document.getElementById("modalBulk");
+                    let modal = bootstrap.Modal.getInstance(modalEl);
+                    if (!modal) modal = new bootstrap.Modal(modalEl);
+
+                    if(modal){
+                      modal.hide();
+                    }
+                    */
+
+                    // Toast de éxito (si lo usas)
+                    document.getElementById("toastInsertados").textContent =
+                      response?.data?.insertados ?? "-";
+                    const toastEl = document.getElementById("toastSuccess");
+                    if (toastEl) new bootstrap.Toast(toastEl).show();
+                    
+                    
+                    const modalEl = document.getElementById("modalBulk");
+                    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                    modal.hide();
+                    // SweetAlert
+                    setTimeout(() => {
+                      Swal.fire(
+                        "Correcto!",
+                        response.mensage || "Se realizó la carga exitosa.",
+                        "success"
+                      );
+                    }, 500);
+                    /*
+                    Swal.fire(
+                      "Correcto!",
+                      response.mensage || "Se realizó la carga exitosa.",
+                      "Se realizó la carga exitosa.",
+                    );
+                    */
+                    ui.uploadBtn.innerHTML =
+                      '<i class="bi bi-check2 me-2"></i> Procesado';
+                  } else {
+                    Swal.fire(
+                      "Error",
+                      response?.mensage ||
+                      "Hubo un problema al procesar el archivo.",
+                      "error",
+                    );
+                    ui.validation.innerHTML = `<span class="text-danger">Error: ${response?.mensage || "Proceso fallido"}</span>`;
+                    ui.uploadBtn.innerHTML =
+                      '<i class="bi bi-upload me-2"></i> Subir y procesar';
+                    ui.uploadBtn.disabled = false;
+                    
+                    const modalEl = document.getElementById("modalBulk");
+                    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                    modal.hide();
+                  }
+                },
+              });
+            };
+            reader.onerror = function () {
+              ui.validation.innerHTML = `<span class="text-danger">No se pudo leer el archivo.</span>`;
+              ui.uploadBtn.innerHTML =
+                '<i class="bi bi-upload me-2"></i> Subir y procesar';
+              ui.uploadBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+          };
+        });
+
+        this.on("removedfile", () => resetModal());
+      },
+    });
+  }
+
+  /* ==============================
+  Eventos
+  ============================== */
+
+  document.querySelectorAll("[data-bulk-key]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      currentKey = e.currentTarget.getAttribute("data-bulk-key"); // 'tardanzas', 'vacaciones', etc.
+      currentCfg = BULK_CONFIG[currentKey];
+      if (!currentCfg)
+        return alert("Configuración no encontrada: " + currentKey);
+      renderModal(currentCfg);
+      modal.show();
+    });
+  });
+
+  modalEl.addEventListener("hidden.bs.modal", resetModal);
+
+  // --- NUEVO: generar plantilla dinámica ---
+  function generateTemplate(cfg) {
+    const headers = cfg.requiredHeaders || [];
+    const row = {};
+    headers.forEach((h) => (row[h] = ""));
+    return [row];
+  }
+  // === Descargar plantilla Excel usando callAPI ===
+  document.getElementById("btnExcel").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!currentCfg || !currentCfg.excelUrl) {
+      alert("No se encontró configuración para generar Excel");
+      return;
+    }
+
+    // Llamar al flujo Node-RED usando callAPI
+    callAPI({
+      method: currentCfg.excelUrl, // endpoint configurado en BULK_CONFIG
+      post: true, // usar método POST
+      params: { tipo: currentKey }, // enviar tipo de carga
+      ok: (response) => {
+        try {
+          if (!response?.base64) {
+            Swal.fire("Error", "Respuesta inválida al generar Excel.", "error");
+            return;
+          }
+
+          const { base64, mime, filename } = response;
+          const byteCharacters = atob(base64);
+          const byteNumbers = Array.from(byteCharacters, (c) =>
+            c.charCodeAt(0),
+          );
+          const byteArray = new Uint8Array(byteNumbers);
+          const blob = new Blob([byteArray], { type: mime });
+
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = filename || "plantilla.xlsx";
+          link.click();
+          URL.revokeObjectURL(link.href);
+
+          Swal.fire(
+            "Éxito",
+            "La plantilla se generó correctamente.",
+            "success",
+          );
+        } catch (err) {
+          Swal.fire(
+            "Error",
+            "No se pudo procesar el archivo generado.",
+            "error",
+          );
+        }
+      },
+      fail: (err) => {
+        Swal.fire(
+          "Error",
+          "Error al generar Excel: " + (err?.message || "Desconocido"),
+          "error",
+        );
+      },
+    });
+  });
+
+  // Detecta si es Select2 y configura eventos apropiados
+  function setupCategoryFilter() {
+    const selectElement = document.getElementById("selCategory");
+
+    if (!$("#selCategory").data("select2")) {
+      // No es Select2, usar evento normal
+      selectElement.addEventListener("change", applyFilters);
+    } else {
+      // Es Select2, usar eventos de jQuery
+      $("#selCategory")
+        .off("change")
+        .on("change", function () {
+          console.log("Select2 changed to:", $(this).val());
+          applyFilters();
+        });
+    }
+  }
+
+  // Ejecutar después de que Select2 se inicialice
+  $(document).ready(function () {
+    setTimeout(setupCategoryFilter, 500); // Pequeño delay para asegurar que Select2 esté listo
+  });
+
+  //==========================================================================================================================================
+  //================================= Funcionalidades adicionales en Cargas Masivas  =========================================================
+  //==========================================================================================================================================
+
+  // ========== ACCIONES RÁPIDAS ==========
+
+  $(document).ready(function () {
+    // 1. BOTÓN "REFRESCAR"
+    $(".btn.filter-pill").on("click", function (e) {
+      e.preventDefault();
+      refrescarPagina();
+    });
+
+    // 2. BOTÓN "CONFIGURACIÓN GENERAL"
+    $('a.btn-primary[href="#"]')
+      .filter(function () {
+        return $(this).text().includes("Configuración");
+      })
+      .on("click", function (e) {
+        e.preventDefault();
+        abrirConfiguracionGeneral();
+      });
+
+    // 3. BOTÓN "HISTORIAL DE CARGAS"
+    $("a.btn-light")
+      .filter(function () {
+        return $(this).text().includes("Historial de cargas");
+      })
+      .on("click", function (e) {
+        e.preventDefault();
+        abrirHistorialCargas();
+      });
+
+    // 4. BOTÓN "GUÍA"
+    $("a.btn-light")
+      .filter(function () {
+        return $(this).text().includes("Guía");
+      })
+      .on("click", function (e) {
+        e.preventDefault();
+        abrirGuia();
+      });
+  });
+
+  // ========== FUNCIONES DE IMPLEMENTACIÓN ==========
+
+  /**
+   * 1. REFRESCAR - Recarga la página con indicador visual
+   */
+  function refrescarPagina() {
+    // Mostrar spinner en el botón
+    const btn = $(".btn.filter-pill");
+    const originalHtml = btn.html();
+
+    btn.prop("disabled", true);
+    btn.html(
+      '<span class="spinner-border spinner-border-sm me-1"></span> Refrescando...',
+    );
+
+    // Opcional: Mostrar toast de confirmación
+    mostrarToast("info", "Refrescando datos...", 1500);
+
+    // Opción A: Recarga simple después de 1.5 segundos
+    setTimeout(() => {
+      location.reload();
+    }, 1500);
+
+    // Opción B: Recarga con cache forzado (si quieres datos frescos)
+    // setTimeout(() => {
+    //     location.reload(true);
+    // }, 1500);
+
+    // Opción C: Recarga suave con animación
+    // recargarConAnimacion();
+  }
+
+  /**
+   * 2. CONFIGURACIÓN GENERAL - Modal de configuración
+   */
+  function abrirConfiguracionGeneral() {
+    // Opción A: Modal simple con Bootstrap
+    $("#modalConfiguracion").modal("show");
+
+    // Opción B: Redirección a página de configuración
+    // window.location.href = '/configuracion/general';
+
+    // Opción C: Modal dinámico con carga AJAX
+    /*
+    $.ajax({
+        url: '/api/configuracion/general',
+        method: 'GET',
+        beforeSend: function() {
+            mostrarCargando('Cargando configuración...');
+        },
+        success: function(data) {
+            $('#modalConfiguracion .modal-body').html(data);
+            $('#modalConfiguracion').modal('show');
+        },
+        error: function() {
+            mostrarError('Error al cargar la configuración');
+        }
+    });
+    */
+  }
+
+  /**
+   * 3. HISTORIAL DE CARGAS - Modal o página de historial
+   */
+  function abrirHistorialCargas() {
+    // Opción A: Modal con tabla de historial
+    cargarHistorialModal();
+
+    // Opción B: Nueva pestaña/página
+    // window.open('/cargas/historial', '_blank');
+
+    // Opción C: Modal con pestañas (últimas cargas, filtros, etc.)
+    /*
+    Swal.fire({
+        title: 'Historial de Cargas',
+        width: '90%',
+        html: `
+            <div class="text-start">
+                <ul class="nav nav-tabs" id="historialTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ultimas">Últimas 24h</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#buscar">Buscar</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#errores">Con errores</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-3">
+                    <div class="tab-pane fade show active" id="ultimas">
+                        <div id="listaUltimasCargas">Cargando...</div>
+                    </div>
+                    <div class="tab-pane fade" id="buscar">
+                        <form id="formBuscarHistorial">
+                            <input type="date" class="form-control mb-2">
+                            <select class="form-select mb-2">
+                                <option>Todos los tipos</option>
+                                <option>Personas</option>
+                                <option>Nómina</option>
+                            </select>
+                            <button class="btn btn-primary w-100">Buscar</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="errores">
+                        <div id="listaErrores">Cargando...</div>
+                    </div>
+                </div>
+            </div>
+        `,
+        showConfirmButton: false,
+        showCloseButton: true
+    });
+    */
+  }
+
+  /**
+   * 4. GUÍA - Documentación/ayuda
+   */
+  function abrirGuia() {
+    // Opción A: Modal con guía embebida
+    $("#modalGuia").modal("show");
+
+    // Opción B: PDF en nueva pestaña
+    // window.open('/documentacion/guia-carga-masiva.pdf', '_blank');
+
+    // Opción C: Página de ayuda con navegación
+    // window.location.href = '/ayuda/carga-masiva';
+
+    // Opción D: Modal interactivo paso a paso
+    /*
+    Swal.fire({
+        title: 'Guía de Carga Masiva',
+        html: `
+            <div class="text-start">
+                <h6>Pasos recomendados:</h6>
+                <ol class="small">
+                    <li class="mb-2">Descarga la plantilla correspondiente</li>
+                    <li class="mb-2">Completa los datos según las instrucciones</li>
+                    <li class="mb-2">Guarda el archivo en formato Excel (.xlsx)</li>
+                    <li class="mb-2">Haz clic en "Cargar" y selecciona tu archivo</li>
+                    <li class="mb-2">Revisa el resultado de la validación</li>
+                </ol>
+                <div class="alert alert-info small">
+                    <i class="bi bi-info-circle me-1"></i>
+                    <strong>Tip:</strong> Puedes cargar hasta 10MB por archivo
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-primary w-100">
+                    <i class="bi bi-download me-1"></i> Descargar guía completa
+                </a>
+            </div>
+        `,
+        confirmButtonText: 'Entendido',
+        width: '500px'
+    });
+    */
+  }
+
+  // ========== FUNCIONES AUXILIARES ==========
+
+  /**
+   * Cargar historial en modal
+   */
+  function cargarHistorialModal() {
+    // Simular datos de ejemplo
+    const datosHistorial = [
+      {
+        fecha: "2024-01-15 10:30",
+        tipo: "Personas",
+        usuario: "lirigoyen@on.pe",
+        estado: "Completado",
+        registros: 45,
+      },
+      {
+        fecha: "2024-01-15 09:15",
+        tipo: "Nómina",
+        usuario: "admin@on.pe",
+        estado: "Completado",
+        registros: 120,
+      },
+      {
+        fecha: "2024-01-14 16:45",
+        tipo: "Vacaciones",
+        usuario: "lirigoyen@on.pe",
+        estado: "Error",
+        registros: 0,
+      },
+      {
+        fecha: "2024-01-14 14:20",
+        tipo: "Estructura",
+        usuario: "admin@on.pe",
+        estado: "Completado",
+        registros: 23,
+      },
+      {
+        fecha: "2024-01-13 11:10",
+        tipo: "Centros Costo",
+        usuario: "lirigoyen@on.pe",
+        estado: "Completado",
+        registros: 15,
+      },
+    ];
+
+    // Crear tabla HTML
+    let tablaHTML = `
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Usuario</th>
+                        <th>Estado</th>
+                        <th>Registros</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+    datosHistorial.forEach((item) => {
+      const estadoClass =
+        item.estado === "Completado" ? "badge bg-success" : "badge bg-danger";
+      tablaHTML += `
+            <tr>
+                <td>${item.fecha}</td>
+                <td>${item.tipo}</td>
+                <td>${item.usuario}</td>
+                <td><span class="${estadoClass}">${item.estado}</span></td>
+                <td>${item.registros}</td>
+                <td>
+                    <button class="btn btn-sm btn-outline-primary" onclick="verDetalleCarga('${item.fecha}', '${item.tipo}')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </td>
+            </tr>
+        `;
+    });
+
+    tablaHTML += `
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-sm btn-outline-secondary" onclick="exportarHistorial()">
+                <i class="bi bi-download me-1"></i> Exportar CSV
+            </button>
+            <button class="btn btn-sm btn-outline-primary float-end" onclick="filtrarHistorial()">
+                <i class="bi bi-funnel me-1"></i> Filtrar
+            </button>
+        </div>
+    `;
+
+    // Mostrar modal
+    Swal.fire({
+      title: "Historial de Cargas",
+      html: tablaHTML,
+      width: "90%",
+      showConfirmButton: false,
+      showCloseButton: true,
+    });
+  }
+
+  /**
+   * Mostrar notificación Toast
+   */
+  function mostrarToast(tipo, mensaje, duracion = 3000) {
+    // Crear toast dinámico si no existe
+    let toastEl = document.getElementById("toastNotificacion");
+    if (!toastEl) {
+      toastEl = document.createElement("div");
+      toastEl.id = "toastNotificacion";
+      toastEl.className = "toast align-items-center text-bg-" + tipo;
+      toastEl.setAttribute("role", "alert");
+      toastEl.setAttribute("aria-live", "assertive");
+      toastEl.setAttribute("aria-atomic", "true");
+      toastEl.innerHTML = `
+            <div class="d-flex">
+                <div class="toast-body"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        `;
+      document.body.appendChild(toastEl);
+    }
+
+    // Configurar y mostrar
+    const toastBody = toastEl.querySelector(".toast-body");
+    toastBody.textContent = mensaje;
+
+    const toast = new bootstrap.Toast(toastEl, {
+      delay: duracion,
+    });
+    toast.show();
+  }
+
+  /**
+   * Mostrar carga/loading
+   */
+  function mostrarCargando(mensaje = "Cargando...") {
+    Swal.fire({
+      title: mensaje,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+    });
+  }
+
+  /**
+   * Mostrar error
+   */
+  function mostrarError(mensaje) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: mensaje,
+      confirmButtonText: "Aceptar",
+    });
+  }
+
+  // ========== HTML ADICIONAL PARA MODALES ==========
+
+  // Agrega estos modales al final de tu body (antes del </body>)
+  const modalesHTML = `
+<!-- Modal Configuración General -->
+<div class="modal fade" id="modalConfiguracion" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Configuración General</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><i class="bi bi-gear me-2"></i>Opciones de Carga</h6>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="validacionAutomatica" checked>
+                            <label class="form-check-label" for="validacionAutomatica">Validación automática</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="notificaciones" checked>
+                            <label class="form-check-label" for="notificaciones">Notificaciones por email</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="backupAutomatico">
+                            <label class="form-check-label" for="backupAutomatico">Backup automático</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6><i class="bi bi-shield me-2"></i>Seguridad</h6>
+                        <div class="mb-3">
+                            <label class="form-label">Tamaño máximo (MB)</label>
+                            <input type="range" class="form-range" min="1" max="50" value="10" id="tamanoMaximo">
+                            <div class="text-muted small" id="tamanoTexto">10 MB</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Formatos permitidos</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="formatoXLSX" checked>
+                                    <label class="form-check-label" for="formatoXLSX">.xlsx</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="formatoCSV">
+                                    <label class="form-check-label" for="formatoCSV">.csv</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h6><i class="bi bi-person me-2"></i>Usuario Actual</h6>
+                <div class="alert alert-info">
+                    <strong>lirigoyen@on.pe</strong><br>
+                    <small>administrador, configurador</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarConfiguracion()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Guía -->
+<div class="modal fade" id="modalGuia" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-question-circle me-2"></i>Guía de Carga Masiva</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="acordionGuia">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#paso1">
+                                Paso 1: Descargar plantilla
+                            </button>
+                        </h2>
+                        <div id="paso1" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p>Para cada tipo de carga, descarga la plantilla correspondiente haciendo clic en "Descargar plantilla".</p>
+                                <img src="/static/images/descarga-plantilla.png" class="img-fluid rounded mb-2" alt="Descargar plantilla">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paso2">
+                                Paso 2: Completar datos
+                            </button>
+                        </h2>
+                        <div id="paso2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Sigue las instrucciones en cada columna. No modifiques los nombres de las columnas.</p>
+                                <div class="alert alert-warning">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>
+                                    <strong>Importante:</strong> Mantén el formato de fecha YYYY-MM-DD
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paso3">
+                                Paso 3: Cargar archivo
+                            </button>
+                        </h2>
+                        <div id="paso3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Haz clic en "Cargar", arrastra tu archivo o selecciónalo desde tu computadora.</p>
+                                <p><strong>Tamaño máximo:</strong> 10 MB</p>
+                                <p><strong>Formatos aceptados:</strong> .xlsx, .xls, .csv</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h6>Recursos adicionales</h6>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-file-earmark-excel me-2"></i>Plantillas de ejemplo
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-film me-2"></i>Video tutorial
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-headset me-2"></i>Soporte técnico
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
+  // Para agregar los modales dinámicamente:
+  // document.body.insertAdjacentHTML('beforeend', modalesHTML);
+
+  // ========== FUNCIONES ADICIONALES ==========
+
+  function guardarConfiguracion() {
+    mostrarToast("success", "Configuración guardada correctamente");
+    $("#modalConfiguracion").modal("hide");
+  }
+
+  function verDetalleCarga(fecha, tipo) {
+    Swal.fire({
+      title: `Detalle de carga - ${tipo}`,
+      text: `Fecha: ${fecha}\nPuedes implementar más detalles aquí.`,
+      icon: "info",
+      confirmButtonText: "Cerrar",
+    });
+  }
+
+  function exportarHistorial() {
+    mostrarToast("success", "Historial exportado como CSV", 2000);
+  }
+
+  function filtrarHistorial() {
+    Swal.fire({
+      title: "Filtrar Historial",
+      html: `
+            <div class="text-start">
+                <div class="mb-3">
+                    <label class="form-label">Fecha desde</label>
+                    <input type="date" class="form-control" id="fechaDesde">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha hasta</label>
+                    <input type="date" class="form-control" id="fechaHasta">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de carga</label>
+                    <select class="form-select" id="tipoCarga">
+                        <option value="">Todos</option>
+                        <option value="personas">Personas</option>
+                        <option value="nomina">Nómina</option>
+                        <option value="ausentismos">Ausentismos</option>
+                    </select>
+                </div>
+            </div>
+        `,
+      showCancelButton: true,
+      confirmButtonText: "Aplicar Filtros",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        mostrarToast("info", "Filtros aplicados", 2000);
+      }
+    });
+  }
+
+  // ========== INICIALIZACIÓN ==========
+
+  $(document).ready(function () {
+    // Agregar modales si no existen
+    if (!document.getElementById("modalConfiguracion")) {
+      document.body.insertAdjacentHTML("beforeend", modalesHTML);
+    }
+
+    // Inicializar tooltips (opcional)
+    $('[data-bs-toggle="tooltip"]').tooltip();
+  });
+
+  //================================= Funcionalidades adicionales en Cargas Masivas  =========================================================
+</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"98a936a4de384e89afb3195812d8f259","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
